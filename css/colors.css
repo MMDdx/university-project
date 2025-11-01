@@ -1,0 +1,72 @@
+.light {
+  --md-sys-color-primary: rgb(0 106 106);
+  --md-sys-color-surface-tint: rgb(0 106 106);
+  --md-sys-color-on-primary: rgb(255 255 255);
+  --md-sys-color-primary-container: rgb(156 241 240);
+  --md-sys-color-on-primary-container: rgb(0 79 80);
+  --md-sys-color-secondary: rgb(74 99 99);
+  --md-sys-color-on-secondary: rgb(255 255 255);
+  --md-sys-color-secondary-container: rgb(204 232 231);
+  --md-sys-color-on-secondary-container: rgb(50 75 75);
+  --md-sys-color-tertiary: rgb(144 75 64);
+  --md-sys-color-on-tertiary: rgb(255 255 255);
+  --md-sys-color-tertiary-container: rgb(255 218 212);
+  --md-sys-color-on-tertiary-container: rgb(115 52 42);
+  --md-sys-color-error: rgb(186 26 26);
+  --md-sys-color-on-error: rgb(255 255 255);
+  --md-sys-color-error-container: rgb(255 218 214);
+  --md-sys-color-on-error-container: rgb(147 0 10);
+  --md-sys-color-background: rgb(244 251 250);
+  --md-sys-color-on-background: rgb(22 29 29);
+  --md-sys-color-surface: rgb(244 251 250);
+  --md-sys-color-on-surface: rgb(22 29 29);
+  --md-sys-color-surface-variant: rgb(218 229 228);
+  --md-sys-color-on-surface-variant: rgb(63 73 72);
+  --md-sys-color-outline: rgb(111 121 121);
+  --md-sys-color-outline-variant: rgb(190 201 200);
+}
+
+:root{font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;}
+
+/* Base layout */
+body.light{
+  background: var(--md-sys-color-background);
+  color: var(--md-sys-color-on-background);
+  margin:0;padding:0;
+}
+.container{max-width:1100px;margin:0 auto;padding:24px}
+
+/* Header */
+.header{display:flex;align-items:center;justify-content:space-between;background:var(--md-sys-color-primary);color:var(--md-sys-color-on-primary);padding:14px 20px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand .logo{width:44px;height:44px;border-radius:8px;background:var(--md-sys-color-primary-container);display:grid;place-items:center;color:var(--md-sys-color-on-primary-container);font-weight:700}
+.nav a{color:var(--md-sys-color-on-primary);text-decoration:none;margin-inline:10px;font-weight:600}
+.nav a:hover{color:var(--md-sys-color-secondary)}
+
+/* Page headings */
+h1,h2{color:var(--md-sys-color-primary);margin:0 0 10px}
+.lead{color:var(--md-sys-color-on-background);opacity:0.9}
+
+/* Card */
+.card{background:var(--md-sys-color-surface);border-radius:10px;padding:16px;box-shadow:0 6px 18px rgba(0,0,0,0.06);border:1px solid var(--md-sys-color-surface-variant)}
+
+/* Team grid */
+.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media (max-width:900px){.team-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.team-grid{grid-template-columns:1fr}}
+
+.member .avatar{width:100%;height:160px;object-fit:cover;border-radius:8px}
+.member h3{margin:10px 0 6px}
+.member p{margin:0;color:var(--md-sys-color-on-surface-variant)}
+
+/* Forms */
+form.card{max-width:520px;margin:20px auto}
+label{display:block;margin-top:10px;font-weight:600}
+input,textarea,select{width:100%;padding:10px;border-radius:8px;border:1px solid var(--md-sys-color-outline);margin-top:8px;background:transparent;color:var(--md-sys-color-on-surface)}
+button.btn{background:var(--md-sys-color-primary);color:var(--md-sys-color-on-primary);border:none;padding:10px 14px;border-radius:8px;font-weight:700;cursor:pointer;margin-top:12px}
+button.btn.secondary{background:var(--md-sys-color-tertiary);color:var(--md-sys-color-on-tertiary)}
+
+/* Small utilities */
+.row{display:flex;gap:12px;align-items:center}
+.center{text-align:center}
+.footer{Padding:20px;text-align:center;color:var(--md-sys-color-on-surface-variant)}
