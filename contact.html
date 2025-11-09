@@ -1,39 +1,53 @@
-<!doctype html>
-<html lang="fa" dir="rtl">
+<!DOCTYPE html>
+<html lang="fa">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>تماس با ما — Tourly</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/colors.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تماس با ما | تورهای گردشگری</title>
+    <link rel="stylesheet" href="css/main.css">
 </head>
-<body class="light">
-  <header class="header container"><div class="brand"><div class="logo">T</div><div style="font-weight:700">Tourly</div></div>
-    <nav class="nav"><a href="index.html">خانه</a><a href="about.html">درباره ما</a><a href="team.html">تیم ما</a><a href="login.html">ورود</a></nav>
-  </header>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">خانه</a></li>
+                <li><a href="index.html#tours">تورها</a></li>
+                <li><a href="about.html">درباره ما</a></li>
+                <li><a href="team.html">تیم ما</a></li>
+                <li><a href="contact.html">تماس با ما</a></li>
+                <li><a href="login.html">ورود</a></li>
+                <li><a href="signup.html">ثبت نام</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <main class="container">
-    <section class="card" style="margin-top:18px">
-      <h1>تماس با ما</h1>
-      <p class="lead">پیام خود را برای ما ارسال کنید؛ پاسخ سریع دریافت خواهید کرد.</p>
-
-      <form data-simulate>
-        <div class="form-message" style="color:var(--md-sys-color-on-surface);margin-bottom:8px"></div>
-        <label>نام و نام خانوادگی
-          <input type="text" name="name" required>
-        </label>
-        <label>ایمیل
-          <input type="email" name="email" required>
-        </label>
-        <label>پیام
-          <textarea name="message" rows="6" required></textarea>
-        </label>
-        <button class="btn" type="submit">ارسال پیام</button>
-      </form>
-    </section>
-  </main>
-
-  <footer class="footer">© ۲۰۲۵ Tourly</footer>
-  <script src="js/main.js"></script>
+    <div class="page-content">
+        <h2>تماس با ما</h2>
+        <img src="https://www.shutterstock.com/image-illustration/contact-us-concept-over-world-260nw-1090239761.jpg" alt="تماس با ما">
+        <p>برای ارتباط با ما، فرم زیر را پر کنید:</p>
+        
+        <form>
+            <div class="form-group">
+                <label for="name">نام:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">ایمیل:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="message">پیام:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            
+            <button type="submit" class="btn">ارسال</button>
+        </form>
+        
+        <p>آدرس: تهران، خیابان انقلاب، پلاک ۱۰۰</p>
+        <p>تلفن: ۰۲۱-۱۲۳۴۵۶۷۸</p>
+        <p>ایمیل: info@tourism.com</p>
+    </div>
 </body>
 </html>

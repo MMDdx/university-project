@@ -1,0 +1,366 @@
+/* main.css - با رنگ‌های تم light */
+@import url(light.css);
+
+  /* استایل‌های عمومی */
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+  
+  body {
+      font-family: 'Vazir', Roboto, sans-serif;
+      background-color: var(--md-sys-color-background);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      direction: rtl;
+      color: var(--md-sys-color-on-background);
+  }
+  
+  header {
+      background-color: var(--md-sys-color-primary);
+      color: var(--md-sys-color-on-primary);
+      padding: 16px;
+      box-shadow: 0 2px 4px var(--md-sys-color-shadow);
+  }
+  
+  nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+  }
+  
+  nav a {
+      color: var(--md-sys-color-on-primary);
+      text-decoration: none;
+      font-weight: 500;
+      padding: 8px 12px;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+  }
+  
+  nav a:hover {
+      background-color: var(--md-sys-color-primary-container);
+      color: var(--md-sys-color-on-primary-container);
+  }
+  
+  .container {
+      background-color: var(--md-sys-color-surface);
+      padding: 32px;
+      border-radius: 12px;
+      box-shadow: 0 1px 3px var(--md-sys-color-shadow);
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+      margin: 32px auto;
+  }
+  
+  .logo {
+      font-size: 28px;
+      font-weight: bold;
+      color: var(--md-sys-color-primary);
+      margin-bottom: 24px;
+  }
+  
+  h2 {
+      color: var(--md-sys-color-on-surface);
+      margin-bottom: 24px;
+      font-size: 24px;
+  }
+  
+  .subtitle {
+      color: var(--md-sys-color-on-surface-variant);
+      margin-bottom: 16px;
+      font-size: 14px;
+  }
+  
+  .form-group {
+      margin-bottom: 16px;
+      text-align: right;
+  }
+  
+  label {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--md-sys-color-on-surface-variant);
+      font-weight: 500;
+      font-size: 14px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="tel"],
+  textarea {
+      width: 100%;
+      padding: 16px;
+      border: 1px solid var(--md-sys-color-outline);
+      border-radius: 4px 4px 0 0;
+      font-size: 16px;
+      transition: border-color 0.3s;
+      direction: rtl;
+      background-color: var(--md-sys-color-surface);
+      color: var(--md-sys-color-on-surface);
+  }
+  
+  input:focus,
+  textarea:focus {
+      outline: none;
+      border-color: var(--md-sys-color-primary);
+      border-width: 2px;
+  }
+  
+  .btn {
+      width: 100%;
+      padding: 12px;
+      background-color: var(--md-sys-color-primary);
+      color: var(--md-sys-color-on-primary);
+      border: none;
+      border-radius: 28px;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background-color 0.3s, box-shadow 0.3s;
+      margin-bottom: 16px;
+      box-shadow: 0 1px 2px var(--md-sys-color-shadow);
+  }
+  
+  .btn:hover {
+      background-color: var(--md-sys-color-primary-container);
+      color: var(--md-sys-color-on-primary-container);
+      box-shadow: 0 2px 4px var(--md-sys-color-shadow);
+  }
+  
+  .links {
+      margin-top: 16px;
+  }
+  
+  .links a {
+      color: var(--md-sys-color-primary);
+      text-decoration: none;
+      font-size: 14px;
+      display: block;
+      margin: 8px 0;
+      transition: color 0.3s;
+  }
+  
+  .links a:hover {
+      color: var(--md-sys-color-secondary);
+  }
+  
+  .error {
+      color: var(--md-sys-color-error);
+      font-size: 12px;
+      margin-top: 4px;
+      text-align: right;
+  }
+  
+  .otp-input {
+      text-align: center;
+      font-size: 20px;
+      letter-spacing: 10px;
+  }
+  
+  /* استایل‌های صفحه اصلی */
+  .hero {
+      background-color: var(--md-sys-color-primary-container);
+      padding: 64px 32px;
+      text-align: center;
+  }
+  
+  .hero h1 {
+      color: var(--md-sys-color-on-primary-container);
+      font-size: 32px;
+      margin-bottom: 16px;
+  }
+  
+  .hero p {
+      color: var(--md-sys-color-on-primary-container);
+      font-size: 18px;
+  }
+  
+  .tours-section {
+      padding: 32px;
+      max-width: 1200px;
+      margin: 0 auto;
+  }
+  
+  .tours-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+  }
+  
+  @media (max-width: 1200px) {
+      .tours-grid {
+          grid-template-columns: repeat(2, 1fr);
+      }
+  }
+  
+  @media (max-width: 600px) {
+      .tours-grid {
+          grid-template-columns: 1fr;
+      }
+  }
+  
+  .tour-card {
+      background-color: var(--md-sys-color-surface);
+      border-radius: 12px;
+      box-shadow: 0 4px 8px var(--md-sys-color-shadow);
+      overflow: hidden;
+      transition: transform 0.3s;
+  }
+  
+  .tour-card:hover {
+      transform: translateY(-4px);
+  }
+  
+  .tour-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+  }
+  
+  .tour-info {
+      padding: 16px;
+  }
+  
+  .tour-info h3 {
+      color: var(--md-sys-color-primary);
+      font-size: 20px;
+      margin-bottom: 8px;
+  }
+  
+  .tour-info p {
+      color: var(--md-sys-color-on-surface-variant);
+      font-size: 14px;
+      margin-bottom: 16px;
+  }
+  
+  .tour-price {
+      color: var(--md-sys-color-tertiary);
+      font-weight: bold;
+      font-size: 16px;
+  }
+  
+  /* استایل‌های صفحات جدید */
+  .page-content {
+      max-width: 800px;
+      margin: 32px auto;
+      padding: 32px;
+      background-color: var(--md-sys-color-surface);
+      border-radius: 12px;
+      box-shadow: 0 1px 3px var(--md-sys-color-shadow);
+      text-align: right;
+  }
+  
+  .page-content img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 24px;
+  }
+  
+  .team-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+  }
+  
+  @media (max-width: 1200px) {
+      .team-grid {
+          grid-template-columns: repeat(2, 1fr);
+      }
+  }
+  
+  @media (max-width: 600px) {
+      .team-grid {
+          grid-template-columns: 1fr;
+      }
+  }
+  
+  .team-member {
+      text-align: center;
+  }
+  
+  .team-member img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 16px;
+  }
+  
+  .team-member h3 {
+      color: var(--md-sys-color-primary);
+      font-size: 18px;
+  }
+  
+  .team-member p {
+      color: var(--md-sys-color-on-surface-variant);
+      font-size: 14px;
+  }
+
+  /* استایل‌های جزئیات تور */
+.tour-details {
+    max-width: 800px;
+    margin: 32px auto;
+    padding: 32px;
+    background-color: var(--md-sys-color-surface);
+    border-radius: 12px;
+    box-shadow: 0 1px 3px var(--md-sys-color-shadow);
+    text-align: right;
+}
+
+.tour-details img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 24px;
+}
+
+.tour-details h2 {
+    color: var(--md-sys-color-primary);
+    margin-bottom: 16px;
+}
+
+.tour-details p {
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 16px;
+    margin-bottom: 24px;
+}
+
+.price-info {
+    font-size: 18px;
+    color: var(--md-sys-color-tertiary);
+    margin-bottom: 16px;
+}
+
+.quantity-form {
+    margin-bottom: 24px;
+}
+
+.quantity-form label {
+    margin-bottom: 8px;
+}
+
+.quantity-form select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--md-sys-color-outline);
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: var(--md-sys-color-surface);
+    color: var(--md-sys-color-on-surface);
+}
+
+.total-price {
+    font-size: 20px;
+    color: var(--md-sys-color-primary);
+    margin-bottom: 16px;
+}
+
+a{
+    text-decoration: none;
+}

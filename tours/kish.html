@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جزئیات تور کیش | تورهای گردشگری</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">خانه</a></li>
+                <li><a href="../index.html#tours">تورها</a></li>
+                <li><a href="../about.html">درباره ما</a></li>
+                <li><a href="../team.html">تیم ما</a></li>
+                <li><a href="../contact.html">تماس با ما</a></li>
+                <li><a href="../login.html">ورود</a></li>
+                <li><a href="../signup.html">ثبت نام</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="tour-details">
+        <h2>تور کیش</h2>
+        <img src="../assets/images/kish-tour.jpg" alt="تور کیش">
+        <p>جزیره کیش، نگین درخشان خلیج فارس، مقصدی ایده‌آل برای تجربه تفریحات آبی هیجان‌انگیز مانند جت اسکی، پاراسلینگ و غواصی، خرید بی‌نظیر در مراکز تجاری مدرن و لذت بردن از آرامش ساحلی است. این تور شامل بلیط هواپیما، هتل و گشت شهری می‌شود.</p>
+        <div class="price-info">قیمت هر نفر: ۵,۰۰۰,۰۰۰ تومان</div>
+        
+        <form class="quantity-form">
+            <label for="quantity">تعداد نفرات:</label>
+            <select id="quantity" onchange="calculateTotal()">
+                <option value="1">۱</option>
+                <option value="2">۲</option>
+                <option value="3">۳</option>
+                <option value="4">۴</option>
+                <option value="5">۵</option>
+                <option value="6">۶</option>
+                <option value="7">۷</option>
+                <option value="8">۸</option>
+                <option value="9">۹</option>
+                <option value="10">۱۰</option>
+            </select>
+            <div class="total-price" id="total">قیمت کل: ۵,۰۰۰,۰۰۰ تومان</div>
+            <a href="../signup.html" class="btn">ثبت نام</a>
+        </form>
+    </div>
+
+    <script>
+        function calculateTotal() {
+            const pricePerPerson = 5000000;
+            const quantity = document.getElementById('quantity').value;
+            const total = pricePerPerson * quantity;
+            document.getElementById('total').textContent = 'قیمت کل: ' + total.toLocaleString() + ' تومان';
+        }
+    </script>
+</body>
+</html>

@@ -1,51 +1,75 @@
-<!doctype html>
-<html lang="fa" dir="rtl">
+<!DOCTYPE html>
+<html lang="fa">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>صفحه اصلی — Tourly</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/colors.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تورهای گردشگری</title>
+    <link rel="stylesheet" href="css/main.css">
 </head>
-<body class="light">
-  <header class="header">
-    <div class="brand container">
-      <div class="logo">T</div>
-      <div>
-        <div style="font-weight:700">Tourly</div>
-        <div style="font-size:13px;color:var(--md-sys-color-on-primary);opacity:0.85">پلتفرم تورهای گردشگری</div>
-      </div>
-    </div>
-    <nav class="nav" style="margin-left:auto;padding-inline:20px">
-      <a href="index.html">خانه</a>
-      <a href="about.html">درباره ما</a>
-      <a href="team.html">تیم ما</a>
-      <a href="contact.html">تماس</a>
-      <a href="login.html">ورود</a>
-    </nav>
-  </header>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">خانه</a></li>
+                <li><a href="#tours">تورها</a></li>
+                <li><a href="about.html">درباره ما</a></li>
+                <li><a href="team.html">تیم ما</a></li>
+                <li><a href="contact.html">تماس با ما</a></li>
+                <li><a href="login.html">ورود</a></li>
+                <li><a href="signup.html">ثبت نام</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <main class="container">
-    <section style="margin-top:22px" class="card">
-      <h1>به ماجراجویی بعدی خود خوش آمدید</h1>
-      <p class="lead">تورهای ویژه، تجربه‌های منحصر به فرد و پشتیبانی ۲۴ ساعته.</p>
-      <div style="margin-top:12px" class="row">
-        <a class="btn" href="team.html">آشنایی با تیم</a>
-        <a class="btn secondary" href="contact.html">تماس با ما</a>
-      </div>
+    <section class="hero">
+        <h1>خوش آمدید به تورهای گردشگری!</h1>
+        <p>بهترین تورهای ایران را با ما تجربه کنید</p>
     </section>
 
-    <section style="margin-top:18px">
-      <h2>تورهای پیشنهادی</h2>
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px">
-        <div class="card">تور ساحلی — ۷ روز — قیمت نمونه</div>
-        <div class="card">تور طبیعت — ۵ روز — قیمت نمونه</div>
-        <div class="card">تور شهری — ۳ روز — قیمت نمونه</div>
-      </div>
+    <section class="tours-section" id="tours">
+        <h2>تورهای محبوب</h2>
+        <div class="tours-grid">
+            <div class="tour-card">
+                <a href="tours/kish.html">
+                    <img src="assets/images/kish.jpg" alt="جزیره کیش">
+                    <div class="tour-info">
+                        <h3>تور کیش</h3>
+                        <p>تور هوایی به جزیره کیش با جاذبه‌های ساحلی و تفریحی. مدت: ۴ روزه.</p>
+                        <div class="tour-price">قیمت: ۵,۰۰۰,۰۰۰ تومان</div>
+                    </div>
+                </a>
+            </div>
+            <div class="tour-card">
+                <a href="tours/mashhad.html">
+                    <img src="assets/images/mashhad.jpg" alt="مشهد مقدس">
+                    <div class="tour-info">
+                        <h3>تور مشهد</h3>
+                        <p>تور زیارتی به حرم امام رضا (ع) با اقامت در هتل. مدت: ۳ روزه.</p>
+                        <div class="tour-price">قیمت: ۳,۵۰۰,۰۰۰ تومان</div>
+                    </div>
+                </a>
+            </div>
+            <div class="tour-card">
+                <a href="tours/qeshm.html">
+                    <img src="assets/images/qeshm.jpg" alt="جزیره قشم">
+                    <div class="tour-info">
+                        <h3>تور قشم</h3>
+                        <p>تور جزیره قشم با بازدید از جاذبه‌های ژئوتوریسم. مدت: ۵ روزه.</p>
+                        <div class="tour-price">قیمت: ۴,۲۰۰,۰۰۰ تومان</div>
+                    </div>
+                </a>
+            </div>
+            <div class="tour-card">
+                <a href="tours/chabahar.html">
+                    <img src="assets/images/chabahar.jpg" alt="چابهار">
+                    <div class="tour-info">
+                        <h3>تور چابهار</h3>
+                        <p>تور ساحلی به چابهار با سواحل زیبا و کوه‌های مریخی. مدت: ۴ روزه.</p>
+                        <div class="tour-price">قیمت: ۴,۸۰۰,۰۰۰ تومان</div>
+                    </div>
+                </a>
+            </div>
+        </div>
     </section>
-  </main>
-
-  <footer class="footer">© ۲۰۲۵ Tourly</footer>
-  <script src="js/main.js"></script>
 </body>
 </html>
