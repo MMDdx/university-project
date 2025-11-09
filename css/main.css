@@ -364,3 +364,66 @@
 a{
     text-decoration: none;
 }
+
+
+/* استایل‌های فرایند پرداخت */
+.payment-container {
+    max-width: 600px;
+    margin: 32px auto;
+    padding: 32px;
+    background-color: var(--md-sys-color-surface);
+    border-radius: 12px;
+    box-shadow: 0 1px 3px var(--md-sys-color-shadow);
+    text-align: right;
+}
+
+.invoice-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 24px;
+}
+
+.invoice-table th,
+.invoice-table td {
+    padding: 12px;
+    border: 1px solid var(--md-sys-color-outline);
+    text-align: right;
+}
+
+.invoice-table th {
+    background-color: var(--md-sys-color-surface-variant);
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+.method-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.method-option {
+    background-color: var(--md-sys-color-surface-variant);
+    padding: 16px;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.method-option:hover {
+    background-color: var(--md-sys-color-primary-container);
+}
+
+.method-option.selected {
+    background-color: var(--md-sys-color-primary);
+    color: var(--md-sys-color-on-primary);
+}
+
+.gateway-form {
+    margin-top: 24px;
+}
+
+.gateway-form input {
+    margin-bottom: 16px;
+}

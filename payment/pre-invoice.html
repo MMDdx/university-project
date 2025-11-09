@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پیش‌فاکتور | تورهای گردشگری</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">خانه</a></li>
+                <li><a href="../index.html#tours">تورها</a></li>
+                <li><a href="../about.html">درباره ما</a></li>
+                <li><a href="../team.html">تیم ما</a></li>
+                <li><a href="../contact.html">تماس با ما</a></li>
+                <li><a href="../login.html">ورود</a></li>
+                <li><a href="../signup.html">ثبت نام</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="payment-container">
+        <h2>پیش‌فاکتور</h2>
+        <table class="invoice-table">
+            <tr>
+                <th>نام تور</th>
+                <td id="tour-name"></td>
+            </tr>
+            <tr>
+                <th>تعداد نفرات</th>
+                <td id="quantity"></td>
+            </tr>
+            <tr>
+                <th>قیمت کل (تومان)</th>
+                <td id="total-price"></td>
+            </tr>
+        </table>
+        <a href="payment-method.html" class="btn" id="proceed-btn">ادامه به پرداخت</a>
+    </div>
+
+    <script>
+        // خواندن query params و نمایش
+        const urlParams = new URLSearchParams(window.location.search);
+        const tour = urlParams.get('tour');
+        const quantity = urlParams.get('quantity');
+        const total = urlParams.get('total');
+
+        document.getElementById('tour-name').textContent = tour || 'نامشخص';
+        document.getElementById('quantity').textContent = quantity || '۱';
+        document.getElementById('total-price').textContent = parseInt(total).toLocaleString() || '۰';
+
+        // بروزرسانی لینک ادامه
+        document.getElementById('proceed-btn').href = `payment-method.html?tour=${tour}&quantity=${quantity}&total=${total}`;
+    </script>
+</body>
+</html>

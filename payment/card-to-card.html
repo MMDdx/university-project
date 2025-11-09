@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پرداخت کارت به کارت | تورهای گردشگری</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">خانه</a></li>
+                <li><a href="../index.html#tours">تورها</a></li>
+                <li><a href="../about.html">درباره ما</a></li>
+                <li><a href="../team.html">تیم ما</a></li>
+                <li><a href="../contact.html">تماس با ما</a></li>
+                <li><a href="../login.html">ورود</a></li>
+                <li><a href="../signup.html">ثبت نام</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="payment-container">
+        <h2>پرداخت کارت به کارت</h2>
+        <p>قیمت کل: <span id="total-price"></span> تومان</p>
+        <p>لطفاً مبلغ را به شماره کارت زیر واریز کنید و رسید را به ایمیل info@tourism.com ارسال کنید:</p>
+        <div class="subtitle">شماره کارت: ۶۰۳۷-۹۹۱۹-۰۰۰۰-۰۰۰۰</div>
+        <div class="subtitle">نام صاحب حساب: تورهای گردشگری</div>
+        <div class="subtitle">بانک: ملی</div>
+        <a href="../contact.html" class="btn">ارسال رسید</a>
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const total = urlParams.get('total');
+        document.getElementById('total-price').textContent = parseInt(total).toLocaleString() || '۰';
+    </script>
+</body>
+</html>
