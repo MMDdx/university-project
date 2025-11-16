@@ -8,6 +8,13 @@
 </head>
 <body>
     <header>
+        <div class="logo-container">
+            <a href="#" class="logo">
+                <!-- لوگوی JPG به جای SVG -->
+                <img src="../assets/logo/logo.png" alt="لوگوی تورهای گردشگری" width="40" height="40" style="border-radius: 8px;">
+         
+            </a>
+        </div>
         <nav>
             <ul>
                 <li><a href="../index.html">خانه</a></li>
@@ -20,25 +27,26 @@
             </ul>
         </nav>
     </header>
-
-    <div class="payment-container">
-        <h2>پیش‌فاکتور</h2>
-        <table class="invoice-table">
-            <tr>
-                <th>نام تور</th>
-                <td id="tour-name"></td>
-            </tr>
-            <tr>
-                <th>تعداد نفرات</th>
-                <td id="quantity"></td>
-            </tr>
-            <tr>
-                <th>قیمت کل (تومان)</th>
-                <td id="total-price"></td>
-            </tr>
-        </table>
-        <a href="payment-method.html" class="btn" id="proceed-btn">ادامه به پرداخت</a>
-    </div>
+    <main>
+        <div class="payment-container">
+            <h2>پیش‌فاکتور</h2>
+            <table class="invoice-table">
+                <tr>
+                    <th>نام تور</th>
+                    <td id="tour-name"></td>
+                </tr>
+                <tr>
+                    <th>تعداد نفرات</th>
+                    <td id="quantity"></td>
+                </tr>
+                <tr>
+                    <th>قیمت کل (تومان)</th>
+                    <td id="total-price"></td>
+                </tr>
+            </table>
+            <a href="payment-method.html" class="btn" id="proceed-btn">ادامه به پرداخت</a>
+        </div>
+    </main>
 
     <script>
         // خواندن query params و نمایش
@@ -54,5 +62,10 @@
         // بروزرسانی لینک ادامه
         document.getElementById('proceed-btn').href = `payment-method.html?tour=${tour}&quantity=${quantity}&total=${total}`;
     </script>
+    <footer>
+        <p>&copy; ۱۴۰۴ تورهای گردشگری ایران. تمامی حقوق محفوظ است.</p>
+        <p><a href="../contact.html">تماس با ما</a> | <a href="../terms.html">قوانین</a></p>
+    </footer>
 </body>
+
 </html>

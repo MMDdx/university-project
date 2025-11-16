@@ -8,6 +8,13 @@
 </head>
 <body>
     <header>
+        <div class="logo-container">
+            <a href="#" class="logo">
+                <!-- لوگوی JPG به جای SVG -->
+                <img src="../assets/logo/logo.png" alt="لوگوی تورهای گردشگری" width="40" height="40" style="border-radius: 8px;">
+         
+            </a>
+        </div>
         <nav>
             <ul>
                 <li><a href="../index.html">خانه</a></li>
@@ -24,7 +31,17 @@
     <div class="tour-details">
         <h2>تور چابهار</h2>
         <img src="../assets/images/chabahar-tour.jpg" alt="تور چابهار">
-        <p>چابهار، جنوبی‌ترین شهر سیستان و بلوچستان و تنها بندر اقیانوسی ایران، با سواحل زیبا، کوه‌های مریخی، بازارهای محلی و فرصت‌های خرید از کشورهای همسایه. این تور شامل بلیط، هتل و گشت ساحلی است.</p>
+        <main>
+            <p>چابهار، جنوبی‌ترین شهر سیستان و بلوچستان و تنها بندر اقیانوسی ایران، با سواحل زیبا، کوه‌های مریخی، بازارهای محلی و فرصت‌های خرید از کشورهای همسایه. این تور شامل بلیط، هتل و گشت ساحلی است.</p>
+
+        </main>
+        <aside>
+            <h3>اطلاعات تور</h3>
+            <ul>
+                <li><strong>مدت:</strong> ۴ روز</li>
+                <li><strong>هتل:</strong> ۴ ستاره</li>
+            </ul>
+        </aside>
         <div class="price-info">قیمت هر نفر: ۴,۸۰۰,۰۰۰ تومان</div>
         
         <form class="quantity-form">
@@ -54,5 +71,10 @@
             document.getElementById('total').textContent = 'قیمت کل: ' + total.toLocaleString() + ' تومان';
         }
     </script>
+    <footer>
+        <p>&copy; ۱۴۰۴ تورهای گردشگری ایران. تمامی حقوق محفوظ است.</p>
+        <p><a href="../contact.html">تماس با ما</a> | <a href="../terms.html">قوانین</a></p>
+    </footer>
 </body>
+
 </html>

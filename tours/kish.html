@@ -8,6 +8,13 @@
 </head>
 <body>
     <header>
+        <div class="logo-container">
+            <a href="#" class="logo">
+                <!-- لوگوی JPG به جای SVG -->
+                <img src="../assets/logo/logo.png" alt="لوگوی تورهای گردشگری" width="40" height="40" style="border-radius: 8px;">
+         
+            </a>
+        </div>
         <nav>
             <ul>
                 <li><a href="../index.html">خانه</a></li>
@@ -24,7 +31,19 @@
     <div class="tour-details">
         <h2>تور کیش</h2>
         <img src="../assets/images/kish-tour.jpg" alt="تور کیش">
-        <p>جزیره کیش، نگین درخشان خلیج فارس، مقصدی ایده‌آل برای تجربه تفریحات آبی هیجان‌انگیز مانند جت اسکی، پاراسلینگ و غواصی، خرید بی‌نظیر در مراکز تجاری مدرن و لذت بردن از آرامش ساحلی است. این تور شامل بلیط هواپیما، هتل و گشت شهری می‌شود.</p>
+        <main>
+            <p>جزیره کیش، نگین درخشان خلیج فارس، مقصدی ایده‌آل برای تجربه تفریحات آبی هیجان‌انگیز مانند جت اسکی، پاراسلینگ و غواصی، خرید بی‌نظیر در مراکز تجاری مدرن و لذت بردن از آرامش ساحلی است. این تور شامل بلیط هواپیما، هتل و گشت شهری می‌شود.</p>
+        </main>
+
+        <aside>
+            <h3>اطلاعات تور</h3>
+            <ul >
+                <li><strong>مدت:</strong> ۴ روز</li>
+                <li><strong>هتل:</strong> ۴ ستاره</li>
+            </ul>
+        </aside>
+
+
         <div class="price-info">قیمت هر نفر: ۵,۰۰۰,۰۰۰ تومان</div>
         
         <form class="quantity-form">
@@ -54,5 +73,10 @@
             document.getElementById('total').textContent = 'قیمت کل: ' + total.toLocaleString() + ' تومان';
         }
     </script>
+    <footer>
+        <p>&copy; ۱۴۰۴ تورهای گردشگری ایران. تمامی حقوق محفوظ است.</p>
+        <p><a href="../contact.html">تماس با ما</a> | <a href="../terms.html">قوانین</a></p>
+    </footer>
 </body>
+
 </html>

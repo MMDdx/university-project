@@ -427,3 +427,137 @@ a{
 .gateway-form input {
     margin-bottom: 16px;
 }
+
+/* فقط nav bar با Flex */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 0 16px;
+}
+
+nav a {
+    color: var(--md-sys-color-on-primary);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+}
+
+nav a:hover {
+    background-color: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
+}
+
+/* Main, Aside, Footer - بدون flex */
+main {
+    padding: 24px 16px;
+    min-height: 20vh;
+}
+
+aside {
+    background-color: var(--md-sys-color-surface-container-low);
+    padding: 24px;
+    border-radius: 12px;
+    margin: 16px;
+    text-align: right;
+    box-shadow: 0 1px 3px var(--md-sys-color-shadow);
+}
+
+footer {
+    background-color: var(--md-sys-color-surface-variant);
+    color: var(--md-sys-color-on-surface-variant);
+    text-align: center;
+    padding: 24px 16px;
+    font-size: 14px;
+    margin-top: 40px; /* به جای margin-top: auto */
+
+}
+
+footer a {
+    color: var(--md-sys-color-primary);
+    text-decoration: none;
+    margin: 0 8px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* body بدون flex */
+body {
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Vazir', Roboto, sans-serif;
+    background-color: var(--md-sys-color-background);
+    color: var(--md-sys-color-on-background);
+    direction: rtl;
+}
+
+aside > ul{
+    list-style: none;
+    padding: 0;
+}
+/* بهترین روش: بدون absolute, بدون flex در body */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: block; /* بدون flex */
+    box-sizing: border-box;
+}
+
+footer {
+    height: 120px; /* ارتفاع ثابت فوتر */
+    background-color: var(--md-sys-color-surface-variant);
+    color: var(--md-sys-color-on-surface-variant);
+    text-align: center;
+    padding: 24px 16px;
+    font-size: 14px;
+    border-top: 1px solid var(--md-sys-color-outline-variant);
+    margin-top: 40px;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+.logo-container {
+    text-align: center;
+    padding: 12px 0;
+    background-color: var(--md-sys-color-primary);
+}
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    /* color: white; */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.logo img {
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    object-fit: cover;
+    margin-left: 8px;
+    border: 2px solid white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo span {
+    color: white;
+}

@@ -8,6 +8,13 @@
 </head>
 <body>
     <header>
+        <div class="logo-container">
+            <a href="#" class="logo">
+                <!-- لوگوی JPG به جای SVG -->
+                <img src="../assets/logo/logo.png" alt="لوگوی تورهای گردشگری" width="40" height="40" style="border-radius: 8px;">
+         
+            </a>
+        </div>
         <nav>
             <ul>
                 <li><a href="../index.html">خانه</a></li>
@@ -24,7 +31,16 @@
     <div class="tour-details">
         <h2>تور قشم</h2>
         <img src="../assets/images/qeshm-tour.jpg" alt="تور قشم">
-        <p>جزیره قشم، بزرگ‌ترین جزیره ایران و خلیج فارس، با جاذبه‌های طبیعی منحصربه‌فرد مانند جنگل‌های حرا، دره ستارگان، غارهای نمکی و سواحل زیبا. این تور شامل بلیط، هتل و بازدید از جاذبه‌های ژئوتوریسم است.</p>
+        <main>
+            <p>جزیره قشم، بزرگ‌ترین جزیره ایران و خلیج فارس، با جاذبه‌های طبیعی منحصربه‌فرد مانند جنگل‌های حرا، دره ستارگان، غارهای نمکی و سواحل زیبا. این تور شامل بلیط، هتل و بازدید از جاذبه‌های ژئوتوریسم است.</p>
+        </main>
+        <aside>
+            <h3>اطلاعات تور</h3>
+            <ul>
+                <li><strong>مدت:</strong> ۴ روز</li>
+                <li><strong>هتل:</strong> ۴ ستاره</li>
+            </ul>
+        </aside>
         <div class="price-info">قیمت هر نفر: ۴,۲۰۰,۰۰۰ تومان</div>
         
         <form class="quantity-form">
@@ -45,7 +61,10 @@
             <a href="../payment/pre-invoice.html?tour=قشم&quantity=1&total=5000000" class="btn" id="register-btn">ثبت نام و پرداخت</a>
         </form>
     </div>
-
+    <footer>
+        <p>&copy; ۱۴۰۴ تورهای گردشگری ایران. تمامی حقوق محفوظ است.</p>
+        <p><a href="../contact.html">تماس با ما</a> | <a href="../terms.html">قوانین</a></p>
+    </footer>
     <script>
         function calculateTotal() {
             const pricePerPerson = 4200000;

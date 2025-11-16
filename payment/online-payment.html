@@ -8,6 +8,13 @@
 </head>
 <body>
     <header>
+        <div class="logo-container">
+            <a href="#" class="logo">
+                <!-- لوگوی JPG به جای SVG -->
+                <img src="../assets/logo/logo.png" alt="لوگوی تورهای گردشگری" width="40" height="40" style="border-radius: 8px;">
+         
+            </a>
+        </div>
         <nav>
             <ul>
                 <li><a href="../index.html">خانه</a></li>
@@ -47,5 +54,10 @@
         const total = urlParams.get('total');
         document.getElementById('total-price').textContent = parseInt(total).toLocaleString() || '۰';
     </script>
+    <footer>
+        <p>&copy; ۱۴۰۴ تورهای گردشگری ایران. تمامی حقوق محفوظ است.</p>
+        <p><a href="../contact.html">تماس با ما</a> | <a href="../terms.html">قوانین</a></p>
+    </footer>
 </body>
+
 </html>
