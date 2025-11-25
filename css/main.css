@@ -561,3 +561,41 @@ html, body {
 .logo span {
     color: white;
 }
+
+.md-filled-button-small {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--md-sys-color-primary); /* Primary color for filled */
+    color: var(--md-sys-color-on-primary); /* Text color */
+    font-family: var(--md-sys-typescale-label-medium-font-family-name, 'Vazir', Roboto, sans-serif); /* Typography */
+    font-size: var(--md-sys-typescale-label-medium-font-size, 14px);
+    font-weight: var(--md-sys-typescale-label-medium-font-weight, 500);
+    line-height: var(--md-sys-typescale-label-medium-line-height, 20px);
+    letter-spacing: var(--md-sys-typescale-label-medium-letter-spacing, 0.1px);
+    height: 32px; /* Small size height */
+    padding: 0 16px; /* Padding for label only */
+    border: none;
+    border-radius: 16px; /* Shape: full rounded */
+    box-shadow: none; /* Elevation 0dp for enabled */
+    cursor: pointer;
+    transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
+    text-decoration: none;
+    min-width: 64px; /* Minimum width */
+}
+
+.md-filled-button-small:hover {
+    background-color: var(--md-sys-color-primary-container); /* Hover state */
+    color: var(--md-sys-color-on-primary-container);
+}
+
+.md-filled-button-small:focus {
+    outline: 2px solid var(--md-sys-color-primary); /* Focus ring */
+    outline-offset: 2px;
+}
+
+.md-filled-button-small .icon {
+    width: 18px;
+    height: 18px;
+    margin-left: 8px; /* If icon is present */
+}
