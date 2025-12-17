@@ -1,0 +1,243 @@
+:root{
+    .md-filled-xsmall {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--md-sys-color-primary);
+        color: var(--md-sys-color-on-primary);
+        font-family: var(--md-sys-typescale-label-medium-font-family-name, 'Vazir', Roboto, sans-serif);
+        font-size: var(--md-sys-typescale-label-medium-font-size, 14px);
+        font-weight: var(--md-sys-typescale-label-medium-font-weight, 500);
+        line-height: var(--md-sys-typescale-label-medium-line-height, 20px);
+        letter-spacing: var(--md-sys-typescale-label-medium-letter-spacing, 0.1px);
+        height: 40px; /* x-small height */
+        min-width: 40px; /* icon-only */
+        padding: 0; /* no padding for icon-only */
+        border: none;
+        border-radius: 9999px; /* full rounded */
+        box-shadow: none; /* elevation 0dp */
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    .md-filled-small {
+        /* مشابه xsmall اما سایز بزرگ‌تر */
+        height: 48px;
+        min-width: 48px;
+        padding: 0;
+        border-radius: 9999px;
+    }
+
+    .md-filled-medium {
+        height: 40px;
+        min-width: 64px;
+        padding: 0 8px; /* text + optional icon */
+        border-radius: 9999px;
+    }
+
+    .md-filled-large {
+        height: 48px;
+        min-width: 80px;
+        padding: 0 12px;
+        border-radius: 9999px;
+    }
+
+    .md-filled-xlarge {
+        height: 56px;
+        min-width: 96px;
+        padding: 0 16px;
+        border-radius: 9999px;
+    }
+
+    /* Outlined Style (خط دور با outline color) */
+    .md-outlined-xsmall {
+        /* مشابه filled اما تغییرات */
+        background-color: transparent;
+        color: var(--md-sys-color-primary);
+        border: 1px solid var(--md-sys-color-outline);
+        height: 40px;
+        min-width: 40px;
+        padding: 0;
+        border-radius: 9999px;
+        box-shadow: none;
+    }
+
+    .md-outlined-small {
+        height: 48px;
+        min-width: 48px;
+        padding: 0;
+        border-radius: 9999px;
+    }
+
+    .md-outlined-medium {
+        height: 40px;
+        min-width: 64px;
+        padding: 0 8px;
+        border-radius: 9999px;
+    }
+
+    .md-outlined-large {
+        height: 48px;
+        min-width: 80px;
+        padding: 0 12px;
+        border-radius: 9999px;
+    }
+
+    .md-outlined-xlarge {
+        height: 56px;
+        min-width: 96px;
+        padding: 0 16px;
+        border-radius: 9999px;
+    }
+
+    /* Tonal Style (تو پر اما با secondary container) */
+    .md-tonal-xsmall {
+        background-color: var(--md-sys-color-secondary-container);
+        color: var(--md-sys-color-on-secondary-container);
+        border: none;
+        height: 40px;
+        min-width: 40px;
+        padding: 0;
+        border-radius: 9999px;
+        box-shadow: none;
+    }
+
+    .md-tonal-small {
+        height: 48px;
+        min-width: 48px;
+        padding: 0;
+        border-radius: 9999px;
+    }
+
+    .md-tonal-medium {
+        height: 40px;
+        min-width: 64px;
+        padding: 0 8px;
+        border-radius: 9999px;
+    }
+
+    .md-tonal-large {
+        height: 48px;
+        min-width: 80px;
+        padding: 0 12px;
+        border-radius: 9999px;
+    }
+
+    .md-tonal-xlarge {
+        height: 56px;
+        min-width: 96px;
+        padding: 0 16px;
+        border-radius: 9999px;
+    }
+
+    /* Elevated Style (تو پر با surface variant + elevation) */
+    .md-elevated-xsmall {
+        background-color: var(--md-sys-color-surface-variant);
+        color: var(--md-sys-color-primary);
+        border: none;
+        height: 40px;
+        min-width: 40px;
+        padding: 0;
+        border-radius: 9999px;
+        box-shadow: var(--md-sys-elevation-level1, 0 1px 2px rgba(0,0,0,0.05)); /* elevation 1dp */
+    }
+
+    .md-elevated-small {
+        height: 48px;
+        min-width: 48px;
+        padding: 0;
+        border-radius: 9999px;
+        box-shadow: var(--md-sys-elevation-level1);
+    }
+
+    .md-elevated-medium {
+        height: 40px;
+        min-width: 64px;
+        padding: 0 8px;
+        border-radius: 9999px;
+        box-shadow: var(--md-sys-elevation-level1);
+    }
+
+    .md-elevated-large {
+        height: 48px;
+        min-width: 80px;
+        padding: 0 12px;
+        border-radius: 9999px;
+        box-shadow: var(--md-sys-elevation-level1);
+    }
+
+    .md-elevated-xlarge {
+        height: 56px;
+        min-width: 96px;
+        padding: 0 16px;
+        border-radius: 9999px;
+        box-shadow: var(--md-sys-elevation-level1);
+    }
+
+    /* Text Style (بدون background, فقط text) */
+    .md-text-xsmall {
+        background-color: transparent;
+        color: var(--md-sys-color-primary);
+        border: none;
+        height: 40px;
+        min-width: 40px;
+        padding: 0;
+        border-radius: 9999px;
+        box-shadow: none;
+    }
+
+    .md-text-small {
+        height: 48px;
+        min-width: 48px;
+        padding: 0;
+        border-radius: 9999px;
+    }
+
+    .md-text-medium {
+        height: 40px;
+        min-width: 64px;
+        padding: 0 8px;
+        border-radius: 9999px;
+    }
+
+    .md-text-large {
+        height: 48px;
+        min-width: 80px;
+        padding: 0 12px;
+        border-radius: 9999px;
+    }
+
+    .md-text-xlarge {
+        height: 56px;
+        min-width: 96px;
+        padding: 0 16px;
+        border-radius: 9999px;
+    }
+    .md-filled-button-small {
+        display: inline-flex; /* برای وسط قرار دادن متن */
+        align-items: center;
+        justify-content: center; /* متن همیشه وسط */
+        background-color: var(--md-sys-color-primary);
+        color: var(--md-sys-color-on-primary);
+        font-family: var(--md-sys-typescale-label-medium-font-family-name, 'Vazir', Roboto, sans-serif);
+        font-size: var(--md-sys-typescale-label-medium-font-size, 14px);
+        font-weight: var(--md-sys-typescale-label-medium-font-weight, 500);
+        line-height: var(--md-sys-typescale-label-medium-line-height, 20px);
+        letter-spacing: var(--md-sys-typescale-label-medium-letter-spacing, 0.1px);
+        height: 32px; /* سایز کوچک */
+        min-width: 64px; /* حداقل عرض */
+        padding: 0 16px; /* پدینگ افقی برای متن */
+        border: none;
+        border-radius: 16px; /* rounded برای filled */
+        box-shadow: none; /* بدون elevation در enabled */
+        cursor: pointer;
+        text-decoration: none;
+        text-align: center; /* اطمینان از وسط متن در RTL */
+        transition: background-color 0.15s ease-in-out;
+    }
+
+    .md-filled-button-small:hover {
+        background-color: var(--md-sys-color-primary-container);
+        color: var(--md-sys-color-on-primary-container);
+    }
+}
