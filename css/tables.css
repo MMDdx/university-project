@@ -1,0 +1,66 @@
+/* جدول پایه */
+.md-data-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1px solid var(--md-sys-color-outline-variant); /* Border around table */
+    border-radius: 8px; /* Rounded corners for table */
+    overflow: hidden; /* For rounded corners */
+    background-color: var(--md-sys-color-surface); /* Surface background */
+    font-family: var(--md-sys-typescale-body-medium-font-family-name, 'Vazir', Roboto, sans-serif);
+    font-size: var(--md-sys-typescale-body-medium-font-size, 14px);
+    font-weight: var(--md-sys-typescale-body-medium-font-weight, 400);
+    line-height: var(--md-sys-typescale-body-medium-line-height, 20px);
+    letter-spacing: var(--md-sys-typescale-body-medium-letter-spacing, 0.25px);
+    color: var(--md-sys-color-on-surface); /* Text color */
+}
+
+/* Header Row */
+.md-data-table thead tr.md-table-header {
+    height: 56px; /* Header height */
+    background-color: var(--md-sys-color-surface-variant); /* Header background */
+}
+
+.md-data-table th.md-table-header-cell {
+    padding: 0 16px; /* Cell padding */
+    text-align: right; /* RTL alignment */
+    font-family: var(--md-sys-typescale-label-medium-font-family-name, 'Vazir', Roboto, sans-serif);
+    font-size: var(--md-sys-typescale-label-medium-font-size, 12px); /* Label medium */
+    font-weight: var(--md-sys-typescale-label-medium-font-weight, 500);
+    line-height: var(--md-sys-typescale-label-medium-line-height, 16px);
+    letter-spacing: var(--md-sys-typescale-label-medium-letter-spacing, 0.5px);
+    color: var(--md-sys-color-on-surface-variant); /* Header text color */
+    border-bottom: 1px solid var(--md-sys-color-outline-variant); /* Bottom border */
+}
+
+/* Body Rows */
+.md-data-table tbody tr.md-table-row {
+    height: 52px; /* Row height */
+    border-bottom: 1px solid var(--md-sys-color-outline-variant); /* Row divider */
+}
+
+.md-data-table tbody tr.md-table-row:last-child {
+    border-bottom: none; /* No border on last row */
+}
+
+.md-data-table td.md-table-cell {
+    padding: 0 16px; /* Cell padding */
+    text-align: right; /* RTL alignment */
+    color: var(--md-sys-color-on-surface); /* Cell text color */
+}
+
+/* Thumbnail for images in cells */
+.md-data-table td.md-table-cell img.thumbnail {
+    width: 48px; /* Thumbnail size */
+    height: 48px;
+    object-fit: cover;
+    border-radius: 4px; /* Slight rounding */
+    margin: 0 auto; /* Center if needed */
+}
+
+/* Hover State for MD Data Table Rows */
+.md-data-table tbody tr.md-table-row:hover {
+    background-color: rgba(22, 29, 29, 0.04); /* on-surface با 4% opacity (rgb(22 29 29) از تم light شما) */
+    transition: background-color 0.15s ease-in-out; /* انیمیشن ورود/خروج */
+    cursor: pointer; /* نشان‌دهنده clickable بودن (اگر rows لینک داشته باشن) */
+}

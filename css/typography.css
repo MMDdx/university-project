@@ -1,6 +1,34 @@
-/* typography.css - متغیرهای سیستم تایپوگرافی Material Design 3 (بر اساس specs M3) */
-/* این متغیرها بر اساس baseline type scale M3 تعریف شدن (font family: Roboto, fallback به Vazir) */
-/* منبع: https://m3.material.io/styles/typography/tokens */
+@font-face {
+    font-family: 'Vazir';
+    src: url('../font/Vazir.woff2') format('woff2'),
+         url('../font/Vazir.woff') format('woff'); /* اگر woff هم دارید */
+    font-weight: 400; /* normal */
+    font-style: normal;
+    font-display: swap; /* برای لود سریع‌تر */
+}
+
+@font-face {
+    font-family: 'Vazir';
+    src: url('../font/Vazir-Bold.woff2') format('woff2'),
+         url('../font/Vazir-Bold.woff') format('woff');
+    font-weight: 700; /* bold */
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vazir';
+    src: url('../font/Vazir-Light.woff2') format('woff2'),
+         url('../font/Vazir-Light.woff') format('woff');
+    font-weight: 300; /* light */
+    font-style: normal;
+    font-display: swap;
+}
+
+
+body {
+    font-family: 'Vazir', Roboto, sans-serif; 
+}
 
 :root {
     /* Display Large */

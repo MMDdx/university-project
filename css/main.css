@@ -2,6 +2,7 @@
 @import url(light.css);
 @import url(typography.css);
 @import url(buttons.css);
+@import url(tables.css);
 
   /* استایل‌های عمومی */
   * {
@@ -727,4 +728,17 @@ html, body {
     border-radius: 9999px;
     font-size: 12px;
     font-weight: bold;
+}
+
+.admin-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 32px 16px;
+}
+
+.md-data-table img.thumbnail {
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    border-radius: 4px;
 }
