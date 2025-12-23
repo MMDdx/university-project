@@ -240,4 +240,92 @@
         background-color: var(--md-sys-color-primary-container);
         color: var(--md-sys-color-on-primary-container);
     }
+
+    .md-button-base {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--md-sys-typescale-label-medium-font-family-name);
+    font-size: var(--md-sys-typescale-label-medium-font-size);
+    font-weight: var(--md-sys-typescale-label-medium-font-weight);
+    line-height: var(--md-sys-typescale-label-medium-line-height);
+    letter-spacing: var(--md-sys-typescale-label-medium-letter-spacing);
+    height: 40px; /* پایه medium, برای سایزها override کنید */
+    min-width: 64px;
+    padding: 0 16px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.15s, opacity 0.15s, outline 0.15s, box-shadow 0.15s;
+}
+
+/* Round Enabled */
+.md-button-round-enabled {
+    @extend .md-button-base;
+    border-radius: 9999px; /* full rounded */
+}
+
+/* Round Disabled */
+.md-button-round-disabled {
+    @extend .md-button-round-enabled;
+    background-color: rgba(var(--md-sys-color-on-surface), 0.12); /* state layer opacity 0.12 */
+    color: rgba(var(--md-sys-color-on-surface), 0.38); /* text opacity 0.38 */
+    pointer-events: none; /* غیرقابل کلیک */
+    opacity: 0.38;
+}
+
+/* Round Hover */
+.md-button-round-hover {
+    @extend .md-button-round-enabled;
+    background-color: rgba(var(--md-sys-color-primary), 0.08); /* state layer opacity 0.08 */
+}
+
+/* Round Focus */
+.md-button-round-focus {
+    @extend .md-button-round-enabled;
+    background-color: rgba(var(--md-sys-color-primary), 0.12); /* state layer 0.12 */
+    outline: 3px solid var(--md-sys-color-primary); /* focus ring */
+    outline-offset: 2px;
+}
+
+/* Round Pressed/Active */
+.md-button-round-pressed {
+    @extend .md-button-round-enabled;
+    background-color: rgba(var(--md-sys-color-primary), 0.12); /* state layer 0.12 */
+}
+
+/* Square Enabled */
+.md-button-square-enabled {
+    @extend .md-button-base;
+    border-radius: 4px; /* square/low rounded */
+}
+
+/* Square Disabled */
+.md-button-square-disabled {
+    @extend .md-button-square-enabled;
+    background-color: rgba(var(--md-sys-color-on-surface), 0.12);
+    color: rgba(var(--md-sys-color-on-surface), 0.38);
+    pointer-events: none;
+    opacity: 0.38;
+}
+
+/* Square Hover */
+.md-button-square-hover {
+    @extend .md-button-square-enabled;
+    background-color: rgba(var(--md-sys-color-primary), 0.08);
+}
+
+/* Square Focus */
+.md-button-square-focus {
+    @extend .md-button-square-enabled;
+    background-color: rgba(var(--md-sys-color-primary), 0.12);
+    outline: 3px solid var(--md-sys-color-primary);
+    outline-offset: 2px;
+}
+
+/* Square Pressed/Active */
+.md-button-square-pressed {
+    @extend .md-button-square-enabled;
+    background-color: rgba(var(--md-sys-color-primary), 0.12);
+}
+
 }
