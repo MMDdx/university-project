@@ -34,20 +34,23 @@
         <p class="subtitle">کد ۶ رقمی را وارد کنید</p>
         
         <form>
-            <div class="form-group">
+            <div class="form-group md-text-field-outlined">
+                
+                <input type="text" id="otp" name="otp" maxlength="6" required class="otp-input" placeholder=" ">
                 <label for="otp">کد تأیید:</label>
-                <input type="text" id="otp" name="otp" maxlength="6" required class="otp-input">
                 <div class="error">کد ۶ رقمی وارد کنید</div>
             </div>
             
-            <div class="form-group">
+            <div class="form-group md-text-field-outlined">
+                
+                <input type="password" id="new-password" name="new-password" required minlength="6" placeholder=" ">
                 <label for="new-password">رمز عبور جدید:</label>
-                <input type="password" id="new-password" name="new-password" required minlength="6">
             </div>
             
-            <div class="form-group">
+            <div class="form-group md-text-field-outlined">
+                
+                <input type="password" id="confirm-new-password" name="confirm-new-password" required placeholder=" ">
                 <label for="confirm-new-password">تکرار رمز جدید:</label>
-                <input type="password" id="confirm-new-password" name="confirm-new-password" required>
             </div>
             
             <button type="submit" class="btn md-filled-button-small md-filled-medium">تأیید و تغییر رمز</button>
@@ -63,6 +66,10 @@
         <p>&copy; ۱۴۰۴ تورهای گردشگری ایران. تمامی حقوق محفوظ است.</p>
         <p><a class="md-outlined-medium" href="contact.html">تماس با ما</a></p>
     </footer>
+    <button class="md-fab-go-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        <img class="fab-icon" src="./assets/svg/arrow-up-svgrepo-com.svg" style="color: aliceblue;">
+            
+    </button>
 </body>
 
 </html>

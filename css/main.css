@@ -761,3 +761,283 @@ html, body {
 .md-badge-large:empty {
     display: none;
 }
+
+.md-icon-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* full rounded */
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.15s, opacity 0.15s;
+    position: relative; /* for state layers */
+}
+
+.md-icon-button svg, .md-icon-button img {
+    width: 24px;
+    height: 24px;
+    fill: var(--md-sys-color-on-surface-variant); /* icon color */
+}
+
+/* States for Icon Button */
+.md-icon-button:disabled {
+    opacity: 0.38; /* disabled */
+    pointer-events: none;
+}
+
+.md-icon-button:hover {
+    background-color: rgba(var(--md-sys-color-on-surface), 0.08); /* hover state layer */
+}
+
+.md-icon-button:focus {
+    background-color: rgba(var(--md-sys-color-on-surface), 0.12); /* focus state layer */
+    outline: 2px solid var(--md-sys-color-primary); /* focus ring */
+    outline-offset: 2px;
+}
+
+.md-icon-button:active {
+    background-color: rgba(var(--md-sys-color-on-surface), 0.12); /* pressed state layer */
+}
+
+/* FAB M3 (Standard, Enabled Only Base, with States) */
+.md-fab {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 16px; /* full rounded per specs */
+    background-color: var(--md-sys-color-primary-container);
+    border: none;
+    box-shadow: var(--md-sys-elevation-level3, 0 1px 3px rgba(0,0,0,0.1), 0 4px 8px 3px rgba(0,0,0,0.05)); /* elevation 3dp enabled */
+    cursor: pointer;
+    transition: background-color 0.15s, box-shadow 0.15s, opacity 0.15s;
+    position: fixed; /* floating */
+    bottom: 16px;
+    right: 16px; /* bottom-right, RTL: right stays right or flip to left if needed */
+    z-index: 1000; /* above content */
+}
+
+.md-fab svg, .md-fab img {
+    width: 24px;
+    height: 24px;
+    fill: var(--md-sys-color-on-primary-container); /* icon color */
+}
+
+/* States for FAB */
+.md-fab:disabled {
+    opacity: 0.38; /* disabled */
+    pointer-events: none;
+}
+
+.md-fab:hover {
+    box-shadow: var(--md-sys-elevation-level4, 0 2px 3px rgba(0,0,0,0.1), 0 6px 10px 4px rgba(0,0,0,0.05)); /* elevation +1 (4dp) */
+    background-color: rgba(var(--md-sys-color-primary-container), 0.08); /* hover layer */
+}
+
+.md-fab:focus {
+    background-color: rgba(var(--md-sys-color-primary-container), 0.1); /* focus layer */
+    outline: 2px solid var(--md-sys-color-primary);
+    outline-offset: 2px;
+}
+
+.md-fab:active {
+    background-color: rgba(var(--md-sys-color-primary-container), 0.12); /* pressed layer */
+}
+
+/* FAB for Go to Top (with upward arrow icon) */
+.md-fab-go-top {
+    @extend .md-fab; /* inherit from md-fab */
+}
+
+.md-fab-go-top svg {
+    transform: rotate(90deg); /* if arrow icon, adjust for upward */
+}
+
+
+.md-fab-go-top {
+    position: fixed;
+    bottom: 24px; /* فاصله از پایین بیشتر برای زیبایی */
+    right: 24px; /* فاصله از راست بیشتر */
+    width: 56px;
+    height: 56px;
+    border-radius: 16px; /* rounded per M3 specs */
+    background-color: rgb(0 106 106); /* primary from your light theme */
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15), 0 1px 3px rgba(0, 0, 0, 0.1); /* سایه نرم و زیبا (level 3 M3 + custom) */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease; /* انیمیشن روان */
+    z-index: 1000; /* بالای همه المان‌ها */
+}
+
+.md-fab-go-top:hover {
+    transform: translateY(-4px); /* بالا آمدن کمی برای حس پویا */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.15); /* سایه قوی‌تر در hover */
+    background-color: rgb(0 79 80); /* کمی تیره‌تر از primary برای hover */
+}
+
+.md-fab-go-top:active {
+    transform: translateY(0); /* بازگشت به جای اصلی در کلیک */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* سایه متوسط در pressed */
+}
+
+.md-fab-go-top .fab-icon {
+    fill: rgb(255 255 255); /* on-primary white */
+    width: 28px; /* icon کمی بزرگ‌تر برای زیبایی */
+    height: 28px;
+}
+
+.md-checkbox {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px; /* between icon and label */
+    cursor: pointer;
+    position: relative; /* for states */
+    direction: rtl; /* RTL: icon right */
+}
+
+.md-checkbox input[type="checkbox"] {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 4px; /* rounded */
+    border: 2px solid var(--md-sys-color-outline-variant); /* unselected */
+    background-color: transparent;
+    transition: background-color 0.15s, border-color 0.15s;
+}
+
+.md-checkbox input[type="checkbox"]:checked {
+    border-color: var(--md-sys-color-primary);
+    background-color: var(--md-sys-color-primary); /* selected */
+}
+
+.md-checkbox label {
+    font-family: var(--md-sys-typescale-body-medium-font-family-name);
+    font-size: var(--md-sys-typescale-body-medium-font-size, 14px);
+    font-weight: var(--md-sys-typescale-body-medium-font-weight, 400);
+    line-height: var(--md-sys-typescale-body-medium-line-height, 20px);
+    letter-spacing: var(--md-sys-typescale-body-medium-letter-spacing, 0.25px);
+    color: var(--md-sys-color-on-surface);
+}
+
+/* States for Checkbox */
+.md-checkbox-enabled { /* base */ }
+
+.md-checkbox-disabled {
+    opacity: 0.38;
+    pointer-events: none;
+}
+
+.md-checkbox-hover input[type="checkbox"] {
+    background-color: rgba(var(--md-sys-color-on-surface), 0.08); /* hover layer */
+}
+
+.md-checkbox-focus input[type="checkbox"] {
+    background-color: rgba(var(--md-sys-color-on-surface), 0.12); /* focus layer */
+    outline: 2px solid var(--md-sys-color-primary);
+    outline-offset: 2px;
+}
+
+.md-checkbox-pressed input[type="checkbox"] {
+    background-color: rgba(var(--md-sys-color-on-surface), 0.12); /* pressed layer */
+}
+
+/* Radio Button M3 States (مشابه checkbox) */
+.md-radio {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    cursor: pointer;
+    position: relative;
+    direction: rtl;
+}
+
+.md-radio input[type="radio"] {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%; /* circle */
+    border: 2px solid var(--md-sys-color-outline-variant);
+    background-color: transparent;
+    transition: background-color 0.15s, border-color 0.15s;
+}
+
+.md-radio input[type="radio"]:checked {
+    border-color: var(--md-sys-color-primary);
+    background-color: var(--md-sys-color-primary);
+}
+
+.md-radio label {
+    /* مشابه checkbox label */
+}
+
+/* States for Radio (مشابه checkbox) */
+.md-radio-enabled { }
+.md-radio-disabled { opacity: 0.38; pointer-events: none; }
+.md-radio-hover input[type="radio"] { background-color: rgba(var(--md-sys-color-on-surface), 0.08); }
+.md-radio-focus input[type="radio"] { background-color: rgba(var(--md-sys-color-on-surface), 0.12); outline: 2px solid var(--md-sys-color-primary); outline-offset: 2px; }
+.md-radio-pressed input[type="radio"] { background-color: rgba(var(--md-sys-color-on-surface), 0.12); }
+
+.md-text-field-outlined {
+    position: relative;
+    width: 100%;
+    margin-bottom: 24px; /* فاصله بین فیلدها */
+    direction: rtl;
+}
+
+.md-text-field-outlined input {
+    width: 100%;
+    padding: 20px 16px 8px 16px; /* بالا بیشتر برای فضای label */
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: 4px 4px 0 0;
+    background-color: transparent;
+    font-family: 'Vazir', Roboto, sans-serif;
+    font-size: 16px;
+    color: var(--md-sys-color-on-surface);
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease, padding-top 0.2s ease;
+}
+
+.md-text-field-outlined label {
+    position: absolute;
+    top: 20px; /* هم‌تراز با padding-top input */
+    right: 16px;
+    font-size: 16px; /* اندازه اولیه برابر input */
+    color: var(--md-sys-color-on-surface-variant);
+    pointer-events: none;
+    transition: all 0.2s ease;
+    background-color: transparent;
+}
+
+/* وقتی input focus داره یا پر شده (به خاطر placeholder=" ") */
+.md-text-field-outlined input:focus,
+.md-text-field-outlined input:not(:placeholder-shown) {
+    border-color: var(--md-sys-color-primary);
+    border-width: 2px;
+    padding-top: 28px; /* فضای بیشتر برای label وقتی بالا می‌ره */
+    padding-bottom: 4px;
+}
+
+/* label وقتی float می‌شه */
+.md-text-field-outlined input:focus + label,
+.md-text-field-outlined input:not(:placeholder-shown) + label {
+    top: 8px;
+    font-size: 12px;
+    color: var(--md-sys-color-primary);
+}
+
+/* hover و focus container */
+.md-text-field-outlined:hover input:not(:focus) {
+    border-color: var(--md-sys-color-on-surface);
+}
+
+.md-text-field-outlined input:focus {
+    border-color: var(--md-sys-color-primary);
+}

@@ -34,30 +34,35 @@
         <h2>ثبت نام</h2>
         
         <form>
-            <div class="form-group">
+            <div class="form-group md-text-field-outlined">
+                
+                <input type="text" id="fullname" name="fullname"  required placeholder=" ">
                 <label for="fullname">نام کامل:</label>
-                <input type="text" id="fullname" name="fullname" required>
             </div>
             
-            <div class="form-group">
+            <div class="form-group md-text-field-outlined">
+         
+                <input type="email" id="email" name="email" required placeholder=" ">
                 <label for="email">ایمیل:</label>
-                <input type="email" id="email" name="email" required>
             </div>
             
-            <div class="form-group">
+            <div class="form-group md-text-field-outlined">
+                
+                <input type="tel" id="phone" name="phone" required placeholder=" ">
                 <label for="phone">شماره موبایل:</label>
-                <input type="tel" id="phone" name="phone" required>
             </div>
             
-            <div class="form-group">
+            <div class="form-group md-text-field-outlined">
+                
+                <input type="password" id="password" name="password" required minlength="6" placeholder=" ">
                 <label for="password">رمز عبور:</label>
-                <input type="password" id="password" name="password" required minlength="6">
-                <div class="error">حداقل ۶ کاراکتر</div>
+                <!-- <div class="error">حداقل ۶ کاراکتر</div> -->
             </div>
             
-            <div class="form-group">
+            <div class="form-group md-text-field-outlined">
+                
+                <input type="password" id="confirm-password" name="confirm-password" required placeholder=" ">
                 <label for="confirm-password">تکرار رمز عبور:</label>
-                <input type="password" id="confirm-password" name="confirm-password" required>
             </div>
             
             <button type="submit" class="btn md-filled-button-small md-filled-medium">ثبت نام</button>
@@ -73,6 +78,10 @@
         <p><a class="md-outlined-medium" href="contact.html">تماس با ما</a></p>
         
     </footer>
+    <button class="md-fab-go-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        <img class="fab-icon" src="./assets/svg/arrow-up-svgrepo-com.svg" style="color: aliceblue;">
+            
+    </button>
 </body>
 
 </html>
