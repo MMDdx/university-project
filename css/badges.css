@@ -1,0 +1,30 @@
+.md-badge-small {
+    position: absolute;
+    top: -4px; /* position top-end with 50% overlap */
+    right: -4px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%; /* full rounded dot */
+    background-color: var(--md-sys-color-primary-container); /* background color */
+    border: 2px solid var(--md-sys-color-surface); /* white border for overlap */
+    box-shadow: none; /* no elevation */
+}
+
+.md-badge-large {
+    position: absolute; /* نگه دار — برای قرارگیری روی آیکون */
+    top: -10px; /* تنظیم برای زیر/بالا (کمتر منفی برای پایین‌تر) */
+    right: -12px; /* تنظیم برای سمت راست (بیشتر منفی برای چپ‌تر) */
+    min-width: 24px;
+    height: 24px;
+    padding: 0 6px;
+    border-radius: 12px;
+    background-color: var(--md-sys-color-error-container);
+    color: var(--md-sys-color-on-error-container);
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border: 2px solid var(--md-sys-color-surface); /* حاشیه سفید */
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1); /* سایه کوچک */
+}

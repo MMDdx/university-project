@@ -3,6 +3,7 @@
 @import url(typography.css);
 @import url(buttons.css);
 @import url(tables.css);
+@import url(badges.css);
 
   /* استایل‌های عمومی */
   * {
@@ -741,4 +742,22 @@ html, body {
     height: 48px;
     object-fit: cover;
     border-radius: 4px;
+}
+
+.cart-icon-container {
+    position: relative; /* لازم برای جایگیری absolute badge */
+    display: inline-flex;
+    align-items: center;
+    margin-left: 16px; /* فاصله از لینک‌های قبلی برای جلوگیری از جابجایی */
+}
+
+/* Cart Icon SVG */
+.cart-icon {
+    fill: var(--md-sys-color-primary);
+}
+
+
+/* اگر 0 باشه, پنهان کن */
+.md-badge-large:empty {
+    display: none;
 }
