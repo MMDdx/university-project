@@ -1041,3 +1041,39 @@ html, body {
 .md-text-field-outlined input:focus {
     border-color: var(--md-sys-color-primary);
 }
+
+
+.md-icon-button-favorite {
+    align-self: flex-end; /* راست در RTL */
+    margin: 8px 16px 8px auto; /* فاصله از راست و پایین */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.md-icon-button-favorite:hover {
+    background-color: white;
+    transform: scale(1.1);
+}
+
+.md-icon-button-favorite svg {
+    width: 24px;
+    height: 24px;
+    fill: none;
+    stroke: var(--md-sys-color-on-surface-variant);
+    stroke-width: 2;
+    transition: fill 0.2s ease, stroke 0.2s ease;
+}
+
+/* حالت پر شده */
+.md-icon-button-favorite.favorited svg {
+    fill: var(--md-sys-color-error);
+    stroke: var(--md-sys-color-error);
+}

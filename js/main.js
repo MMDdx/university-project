@@ -1,16 +1,25 @@
-
+let buttons = document.querySelectorAll(".cart-section button")
 const badge = document.getElementById('cart-count');
-let cartCount = +badge.textContent;
+const favoriteIcon = document.querySelectorAll('.md-icon-button-favorite')
 
 function addToCart() {
-            cartCount++;
-            badge.textContent = cartCount;
+    let cartCount = +badge.textContent;
+    cartCount++;
+    badge.textContent = cartCount;
            
 }
 
-
-let buttons = document.querySelectorAll(".cart-section button")
-
-for (const btn of buttons) {
-    btn.onclick = addToCart
+if (buttons){
+    for (const btn of buttons) {
+        btn.onclick = addToCart
+    }
 }
+
+if (favoriteIcon){
+    favoriteIcon.forEach(button => {
+        button.addEventListener('click', function() {
+            this.classList.toggle('favorited');
+        });
+    });
+}
+
