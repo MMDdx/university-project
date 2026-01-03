@@ -1,0 +1,82 @@
+/* Switch M3 - با حالات (Enabled, Disabled, Hover, Focus, Pressed) */
+.md-switch {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 16px; /* بین switch و label */
+    cursor: pointer;
+    direction: rtl; /* RTL: handle از راست به چپ */
+    font-family: var(--md-sys-typescale-body-medium-font-family-name, 'Vazir', Roboto, sans-serif);
+    font-size: var(--md-sys-typescale-body-medium-font-size, 14px);
+    color: var(--md-sys-color-on-surface);
+}
+
+/* Track */
+.md-switch .track {
+    width: 52px;
+    height: 32px;
+    border-radius: 9999px; /* full rounded */
+    background-color: var(--md-sys-color-outline); /* unselected track */
+    border: 2px solid var(--md-sys-color-outline-variant); /* outline */
+    transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+/* Handle (Thumb) */
+.md-switch .handle {
+    position: absolute;
+    top: 8px; /* center in track */
+    right: 6px; /* unselected position in RTL (راست) */
+    width: 16px; /* unselected size */
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--md-sys-color-surface);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05); /* slight shadow */
+    transition: all 0.15s ease;
+}
+
+/* Input hidden */
+.md-switch input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Selected State */
+.md-switch input:checked ~ .track {
+    background-color: var(--md-sys-color-primary);
+    border-color: var(--md-sys-color-primary);
+}
+
+.md-switch input:checked ~ .handle {
+    right: calc(52px - 24px - 4px); /* selected position in RTL (چپ track) */
+    width: 24px; /* selected size */
+    height: 24px;
+    top: 4px;
+    background-color: var(--md-sys-color-on-primary);
+}
+
+/* States */
+.md-switch--disabled {
+    opacity: 0.38;
+    pointer-events: none;
+}
+
+.md-switch--hover .track {
+    background-color: rgba(var(--md-sys-color-on-surface), 0.08); /* hover layer on unselected */
+}
+
+.md-switch--focus .track {
+    background-color: rgba(var(--md-sys-color-on-surface), 0.12); /* focus layer */
+    outline: 2px solid var(--md-sys-color-primary);
+    outline-offset: 2px;
+}
+
+.md-switch--pressed .track {
+    background-color: rgba(var(--md-sys-color-on-surface), 0.12); /* pressed layer */
+}
+
+/* Label */
+.md-switch label {
+    position: relative;
+    z-index: 1;
+}

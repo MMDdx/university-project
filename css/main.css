@@ -4,6 +4,7 @@
 @import url(buttons.css);
 @import url(tables.css);
 @import url(badges.css);
+@import url(switch.css);
 
   /* استایل‌های عمومی */
   * {
@@ -1040,4 +1041,26 @@ html, body {
 
 .md-text-field-outlined input:focus {
     border-color: var(--md-sys-color-primary);
+}
+
+.settings-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 16px;
+}
+
+.settings-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* Dark Mode Example */
+.dark-mode {
+    background-color: #121212; /* مثال ساده dark background */
+    color: white;
+}
+
+.dark-mode .md-switch .track {
+    background-color: #757575; /* dark adjustment */
 }
