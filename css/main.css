@@ -1064,3 +1064,62 @@ html, body {
 .dark-mode .md-switch .track {
     background-color: #757575; /* dark adjustment */
 }
+
+/* Top Bar */
+.top-bar {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+}
+
+#search-input {
+    flex: 1;
+    min-width: 200px;
+}
+
+#sort-dropdown {
+    width: 200px;
+}
+
+.categories {
+    display: flex;
+    gap: 16px;
+}
+
+/* Sidebar Filters */
+.sidebar-filters {
+    width: 250px;
+    float: left;
+    padding: 16px;
+    background-color: var(--md-sys-color-surface-variant);
+    border-radius: 8px;
+    margin-right: 24px;
+}
+
+.filter-group h4 {
+    margin-bottom: 8px;
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* Tours Grid */
+.tours-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+/* Responsive (sidebar زیر بره در موبایل) */
+@media (max-width: 768px) {
+    .sidebar-filters {
+        float: none;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 24px;
+    }
+}

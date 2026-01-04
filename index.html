@@ -29,65 +29,147 @@
         </nav>
     </header>
 
-    <section class="hero">
-        <h1>خوش آمدید به تورهای گردشگری!</h1>
-        <p>بهترین تورهای ایران را با ما تجربه کنید</p>
-    </section>
+    <main>
+        <section class="hero">
+            <h1>خوش آمدید به تورهای گردشگری!</h1>
+            <p>بهترین تورهای ایران را با ما تجربه کنید</p>
+        </section>
 
-    <section class="tours-section" id="tours">
-        <h2>تورهای محبوب</h2>
-        <div class="tours-grid">
-            <div class="tour-card md-card-elevated">
-                <a href="tours/kish.html">
-                    <img src="assets/images/kish.jpg" alt="جزیره کیش">
-                    <div class="tour-info">
-                        <h3>تور کیش</h3>
-                        <p>تور هوایی به جزیره کیش با جاذبه‌های ساحلی و تفریحی. مدت: ۴ روزه.</p>
-                        <div class="tour-price">قیمت: ۵,۰۰۰,۰۰۰ تومان</div>
-                    </div>
-                </a>
+        <section class="tours-section" id="tours">
+            <h2>تورهای محبوب</h2>
+
+            <!-- لینک به تورهای پرفروش -->
+            <div class="featured-links">
+                <a href="tours/kish.html" class="md-text-medium">پرفروش‌ترین: تور کیش</a>
+                <a href="tours/mashhad.html" class="md-text-medium">پرفروش‌ترین: تور مشهد</a>
             </div>
-            <div class="tour-card md-card-elevated">
-                <a href="tours/mashhad.html">
-                    <img src="assets/images/mashhad.jpg" alt="مشهد مقدس">
-                    <div class="tour-info">
-                        <h3>تور مشهد</h3>
-                        <p>تور زیارتی به حرم امام رضا (ع) با اقامت در هتل. مدت: ۳ روزه.</p>
-                        <div class="tour-price">قیمت: ۳,۵۰۰,۰۰۰ تومان</div>
-                    </div>
-                </a>
+
+            <!-- Top Bar: Search + Sorting + Categories -->
+            <div class="top-bar">
+                <input type="text" id="search-input" class="md-text-field-outlined" placeholder="جستجو تور..." oninput="filterTours()">
+                <select id="sort-dropdown" class="md-filled-medium" onchange="sortTours()">
+                    <option value="popularity">مرتب‌سازی بر اساس محبوبیت</option>
+                    <option value="price-low">قیمت کم به زیاد</option>
+                    <option value="price-high">قیمت زیاد به کم</option>
+                </select>
+                <div class="categories">
+                    <a href="#" onclick="filterByCategory('ساحلی')" class="md-text-medium">ساحلی</a>
+                    <a href="#" onclick="filterByCategory('زیارتی')" class="md-text-medium">زیارتی</a>
+                    <a href="#" onclick="filterByCategory('طبیعت‌گردی')" class="md-text-medium">طبیعت‌گردی</a>
+                </div>
             </div>
-            <div class="tour-card md-card-elevated">
-                <a href="tours/qeshm.html">
-                    <img src="assets/images/qeshm.jpg" alt="جزیره قشم">
-                    <div class="tour-info">
-                        <h3>تور قشم</h3>
-                        <p>تور جزیره قشم با بازدید از جاذبه‌های ژئوتوریسم. مدت: ۵ روزه.</p>
-                        <div class="tour-price">قیمت: ۴,۲۰۰,۰۰۰ تومان</div>
-                    </div>
-                </a>
+
+            <!-- Sidebar Left: Filters -->
+            <aside class="sidebar-filters">
+                <h3>فیلترها</h3>
+                <div class="filter-group">
+                    <h4>قیمت</h4>
+                    <label class="md-radio">
+                        <input type="radio" name="price" value="under4" onchange="filterTours()">
+                        کمتر از ۴ میلیون
+                    </label>
+                    <label class="md-radio">
+                        <input type="radio" name="price" value="4to6" onchange="filterTours()">
+                        ۴ تا ۶ میلیون
+                    </label>
+                    <label class="md-radio">
+                        <input type="radio" name="price" value="" onchange="filterTours()"> <!-- برای reset -->
+                        همه
+                    </label>
+                </div>
+                <div class="filter-group">
+                    <h4>مکان</h4>
+                    <label class="md-radio">
+                        <input type="radio" name="location" value="کیش" onchange="filterTours()">
+                        کیش
+                    </label>
+                    <label class="md-radio">
+                        <input type="radio" name="location" value="مشهد" onchange="filterTours()">
+                        مشهد
+                    </label>
+                    <label class="md-radio">
+                        <input type="radio" name="location" value="قشم" onchange="filterTours()">
+                        قشم
+                    </label>
+                    <label class="md-radio">
+                        <input type="radio" name="location" value="چابهار" onchange="filterTours()">
+                        چابهار
+                    </label>
+                    <label class="md-radio">
+                        <input type="radio" name="location" value="" onchange="filterTours()">
+                        همه
+                    </label>
+                </div>
+                <div class="filter-group">
+                    <h4>مدت</h4>
+                    <label class="md-radio">
+                        <input type="radio" name="duration" value="3day" onchange="filterTours()">
+                        ۳ روزه
+                    </label>
+                    <label class="md-radio">
+                        <input type="radio" name="duration" value="4plus" onchange="filterTours()">
+                        ۴ روزه +
+                    </label>
+                    <label class="md-radio">
+                        <input type="radio" name="duration" value="" onchange="filterTours()">
+                        همه
+                    </label>
+                </div>
+            </aside>
+
+            <!-- Grid تورها -->
+            <div class="tours-grid" id="tours-grid">
+                <!-- کارت‌ها (با data attributes برای فیلتر) -->
+                <div class="tour-card md-card-elevated">
+                    <a href="tours/kish.html" data-price="5000000" data-location="کیش" data-category="ساحلی">
+                        <img src="assets/images/kish.jpg" alt="جزیره کیش">
+                        <div class="tour-info">
+                            <h3>تور کیش</h3>
+                            <p>تور هوایی به جزیره کیش با جاذبه‌های ساحلی و تفریحی. مدت: ۴ روزه.</p>
+                            <div class="tour-price">قیمت: ۵,۰۰۰,۰۰۰ تومان</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="tour-card md-card-elevated">
+                    <a href="tours/mashhad.html" data-price="3500000" data-location="مشهد" data-category="زیارتی">
+                        <img src="assets/images/mashhad.jpg" alt="مشهد مقدس">
+                        <div class="tour-info">
+                            <h3>تور مشهد</h3>
+                            <p>تور زیارتی به حرم امام رضا (ع) با اقامت در هتل. مدت: ۳ روزه.</p>
+                            <div class="tour-price">قیمت: ۳,۵۰۰,۰۰۰ تومان</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="tour-card md-card-elevated" >
+                    <a href="tours/qeshm.html" data-price="4200000" data-location="قشم" data-category="ساحلی">
+                        <img src="assets/images/qeshm.jpg" alt="جزیره قشم">
+                        <div class="tour-info">
+                            <h3>تور قشم</h3>
+                            <p>تور جزیره قشم با بازدید از جاذبه‌های ژئوتوریسم. مدت: ۵ روزه.</p>
+                            <div class="tour-price">قیمت: ۴,۲۰۰,۰۰۰ تومان</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="tour-card md-card-elevated">
+                    <a href="tours/chabahar.html" data-price="4800000" data-location="چابهار" data-category="طبیعت‌گردی">
+                        <img src="assets/images/chabahar.jpg" alt="چابهار">
+                        <div class="tour-info">
+                            <h3>تور چابهار</h3>
+                            <p>تور ساحلی به چابهار با سواحل زیبا و کوه‌های مریخی. مدت: ۴ روزه.</p>
+                            <div class="tour-price">قیمت: ۴,۸۰۰,۰۰۰ تومان</div>
+                        </div>
+                    </a>
+                </div>
             </div>
-            <div class="tour-card md-card-elevated">
-                <a href="tours/chabahar.html">
-                    <img src="assets/images/chabahar.jpg" alt="چابهار">
-                    <div class="tour-info">
-                        <h3>تور چابهار</h3>
-                        <p>تور ساحلی به چابهار با سواحل زیبا و کوه‌های مریخی. مدت: ۴ روزه.</p>
-                        <div class="tour-price">قیمت: ۴,۸۰۰,۰۰۰ تومان</div>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer>
         <p>&copy; ۱۴۰۴ تورهای گردشگری ایران. تمامی حقوق محفوظ است.</p>
-        <p><a class="md-outlined-medium" href="contact.html">تماس با ما</a></p>
     </footer>
-    <button class="md-fab-go-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
-        <img class="fab-icon" src="./assets/svg/arrow-up-svgrepo-com.svg" style="color: aliceblue;">
-            
-    </button>
-</body>
 
+    <script src="./js/main.js">
+    
+    </script>
+</body>
 </html>
