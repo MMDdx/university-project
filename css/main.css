@@ -1123,3 +1123,19 @@ html, body {
         margin-bottom: 24px;
     }
 }
+
+.error {
+    color: var(--md-sys-color-error);
+    font-size: 12px;
+    margin-top: 4px;
+    text-align: right;
+    display: none; 
+}
+
+.md-text-field-outlined.invalid input {
+    border-color: var(--md-sys-color-error);
+}
+
+.md-text-field-outlined.invalid .error {
+    display: block; 
+}

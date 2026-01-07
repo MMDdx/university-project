@@ -34,23 +34,23 @@
         <img src="https://www.shutterstock.com/image-illustration/contact-us-concept-over-world-260nw-1090239761.jpg" alt="تماس با ما">
         <p>برای ارتباط با ما، فرم زیر را پر کنید:</p>
         
-        <form>
+        <form id="contact-form" novalidate>
             <div class="form-group md-text-field-outlined">
-                
-                <input type="text" id="name" name="name" required placeholder=" "> 
+                <input type="text" id="name" name="name" required placeholder=" ">
                 <label for="name">نام:</label>
+                <div class="error"></div>
             </div>
             
             <div class="form-group md-text-field-outlined">
-                
                 <input type="email" id="email" name="email" required placeholder=" ">
                 <label for="email">ایمیل:</label>
+                <div class="error"></div>
             </div>
             
             <div class="form-group md-text-field-outlined">
-                
                 <textarea id="message" name="message" rows="5" required placeholder=" "></textarea>
                 <label for="message">پیام:</label>
+                <div class="error"></div>
             </div>
             
             <button type="submit" class="btn md-filled-button-small md-filled-medium">ارسال</button>
@@ -68,6 +68,7 @@
         <img class="fab-icon" src="./assets/svg/arrow-up-svgrepo-com.svg" style="color: aliceblue;">
             
     </button>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

@@ -33,36 +33,35 @@
         <div class="logo">🗺️ تورهای گردشگری</div>
         <h2>ثبت نام</h2>
         
-        <form>
+        <form id="signup-form" novalidate> <!-- اضافه کردن novalidate برای غیرفعال ارور HTML -->
             <div class="form-group md-text-field-outlined">
-                
-                <input type="text" id="fullname" name="fullname"  required placeholder=" ">
+                <input type="text" id="fullname" name="fullname" required placeholder=" ">
                 <label for="fullname">نام کامل:</label>
+                <div class="error"></div>
             </div>
             
             <div class="form-group md-text-field-outlined">
-         
                 <input type="email" id="email" name="email" required placeholder=" ">
                 <label for="email">ایمیل:</label>
+                <div class="error"></div>
             </div>
             
             <div class="form-group md-text-field-outlined">
-                
                 <input type="tel" id="phone" name="phone" required placeholder=" ">
                 <label for="phone">شماره موبایل:</label>
+                <div class="error"></div>
             </div>
             
             <div class="form-group md-text-field-outlined">
-                
                 <input type="password" id="password" name="password" required minlength="6" placeholder=" ">
                 <label for="password">رمز عبور:</label>
-                <!-- <div class="error">حداقل ۶ کاراکتر</div> -->
+                <div class="error"></div>
             </div>
             
             <div class="form-group md-text-field-outlined">
-                
                 <input type="password" id="confirm-password" name="confirm-password" required placeholder=" ">
                 <label for="confirm-password">تکرار رمز عبور:</label>
+                <div class="error"></div>
             </div>
             
             <button type="submit" class="btn md-filled-button-small md-filled-medium">ثبت نام</button>
@@ -82,6 +81,10 @@
         <img class="fab-icon" src="./assets/svg/arrow-up-svgrepo-com.svg" style="color: aliceblue;">
             
     </button>
+
+    <script src="js/main.js">
+       
+    </script>
 </body>
 
 </html>
