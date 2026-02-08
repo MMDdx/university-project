@@ -54,7 +54,7 @@
             document.querySelectorAll('.method-option').forEach(el => el.classList.remove('selected'));
             document.getElementById(method).classList.add('selected');
             const confirmBtn = document.getElementById('confirm-btn');
-            confirmBtn.style.display = 'block';
+
             confirmBtn.href = `${method === 'online' ? 'online-payment.html' : 'card-to-card.html'}?tour=${tour}&quantity=${quantity}&total=${total}`;
         }
     </script>

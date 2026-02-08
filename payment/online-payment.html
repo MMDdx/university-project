@@ -29,29 +29,29 @@
     </nav>
 </header>
 
-    <div class="payment-container md-card-filled">
-        <h2>درگاه پرداخت آنلاین</h2>
-        <p>قیمت کل: <span id="total-price"></span> تومان</p>
-        <form class="gateway-form">
-            <div class="form-group md-text-field-outlined">
-                
-                <input type="text" id="card-number" placeholder="۱۶ رقمی" required >
-                <label for="card-number">شماره کارت:</label>
-            </div>
-            <div class="form-group md-text-field-outlined">
-                
-                <input type="text" id="cvv" placeholder="۳ یا ۴ رقمی" required>
-                <label for="cvv">CVV2:</label>
-            </div>
-            <div class="form-group md-text-field-outlined">
-                
-                <input type="text" id="expire" placeholder="MM/YY" required>
-                <label for="expire">تاریخ انقضا:</label>
-            </div>
-            <button type="submit" class="btn md-filled-button-small md-filled-medium">پرداخت</button>
-        </form>
-        <p class="subtitle">این یک شبیه‌سازی است. در واقعیت به درگاه بانک متصل می‌شود.</p>
-    </div>
+<div class="payment-container md-card-filled">
+    <h2>درگاه پرداخت آنلاین</h2>
+    <p>قیمت کل: <span id="total-price"></span> تومان</p>
+    <form id="payment-form" novalidate>
+        <div class="form-group md-text-field-outlined">
+            <input type="text" id="card-number" placeholder="" required>
+            <label for="card-number">شماره کارت - ۱۶ رقم</label>
+            <div class="error"></div>
+        </div>
+        <div class="form-group md-text-field-outlined">
+            <input type="text" id="cvv" placeholder="" required>
+            <label for="cvv">CVV2</label>
+            <div class="error"></div>
+        </div>
+        <div class="form-group md-text-field-outlined">
+            <input type="text" id="expire" placeholder="" required>
+            <label for="expire">تاریخ انقضا: ماه/سال </label>
+            <div class="error"></div>
+        </div>
+        <button type="submit" class="btn md-filled-button-small md-filled-medium">پرداخت</button>
+    </form>
+    <p class="subtitle">این یک شبیه‌سازی است. در واقعیت به درگاه بانک متصل می‌شود.</p>
+</div>
 
     <script>
         const urlParams = new URLSearchParams(window.location.search);
@@ -71,5 +71,7 @@
     <img class="fab-icon" src="../assets/svg/arrow-up-svgrepo-com.svg" >
 </button>
 </body>
+
+<script src="../js/main.js"></script>
 
 </html>

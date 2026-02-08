@@ -31,8 +31,9 @@
     .md-filled-medium {
         height: 40px;
         min-width: 64px;
-        padding: 0 8px; /* text + optional icon */
+        /*padding: 0 8px; !* text + optional icon *!*/
         border-radius: 9999px;
+        text-align: center;
     }
 
     .md-filled-large {
