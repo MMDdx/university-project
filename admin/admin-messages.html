@@ -7,16 +7,23 @@
     <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="../index.html">خانه</a></li>
-                <li><a href="admin-users.html">کاربران</a></li>
-                <li><a href="admin-tours.html">تورها</a></li>
-                <li><a href="admin-messages.html">پیام‌ها</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+    <div class="logo-container">
+        <a href="#" class="logo">
+            <!-- لوگوی JPG به جای SVG -->
+            <img src="../assets/logo/logo.png" alt="لوگوی تورهای گردشگری" width="40" height="40" >
+
+        </a>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="../index.html">خانه</a></li>
+            <li><a href="admin-users.html">کاربران</a></li>
+            <li><a href="admin-tours.html">تورها</a></li>
+            <li><a href="admin-messages.html">پیام‌ها</a></li>
+        </ul>
+    </nav>
+</header>
 
     <main>
         <section class="admin-section">
@@ -78,8 +85,17 @@
         </section>
     </main>
 
-    <footer>
-        <p>&copy; ۱۴۰۴ تورهای گردشگری ایران. تمامی حقوق محفوظ است.</p>
-    </footer>
+<footer>
+    <p>&copy; ۱۴۰۴ تورهای گردشگری ایران. تمامی حقوق محفوظ است.</p>
+    <p>
+        <a href="../about.html">درباره ما</a> |
+        <a href="../contact.html">تماس با ما</a> |
+        <a href="#">قوانین</a>
+    </p>
+    <p>تلفن: ۰۲۱-۱۲۳۴۵۶۷۸ | ایمیل: info@tourism.com</p>
+</footer>
+<button class="md-fab-go-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+    <img class="fab-icon" src="../assets/svg/arrow-up-svgrepo-com.svg" >
+</button>
 </body>
 </html>
