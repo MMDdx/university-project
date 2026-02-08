@@ -1147,3 +1147,17 @@ html, body {
 .md-text-field-outlined.invalid .error {
     display: block;
 }
+
+.tours-section {
+    min-height: 70vh;           /* حداقل ارتفاع زیاد */
+    padding-bottom: 150px;      /* فضای کافی برای فوتر */
+}
+
+.tours-grid {
+    min-height: 55vh;           /* حداقل ارتفاع برای گرید تورها */
+}
+
+/* وقتی هیچ توری نمایش داده نمی‌شود، ارتفاع حفظ شود */
+.tours-grid:empty {
+    min-height: 60vh;
+}
