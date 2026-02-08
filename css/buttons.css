@@ -260,13 +260,13 @@
 
 /* Round Enabled */
 .md-button-round-enabled {
-    @extend .md-button-base;
+     .md-button-base;
     border-radius: 9999px; /* full rounded */
 }
 
 /* Round Disabled */
 .md-button-round-disabled {
-    @extend .md-button-round-enabled;
+    .md-button-round-enabled;
     background-color: rgba(var(--md-sys-color-on-surface), 0.12); /* state layer opacity 0.12 */
     color: rgba(var(--md-sys-color-on-surface), 0.38); /* text opacity 0.38 */
     pointer-events: none; /* غیرقابل کلیک */
@@ -275,13 +275,13 @@
 
 /* Round Hover */
 .md-button-round-hover {
-    @extend .md-button-round-enabled;
+  .md-button-round-enabled;
     background-color: rgba(var(--md-sys-color-primary), 0.08); /* state layer opacity 0.08 */
 }
 
 /* Round Focus */
 .md-button-round-focus {
-    @extend .md-button-round-enabled;
+    .md-button-round-enabled;
     background-color: rgba(var(--md-sys-color-primary), 0.12); /* state layer 0.12 */
     outline: 3px solid var(--md-sys-color-primary); /* focus ring */
     outline-offset: 2px;
@@ -289,19 +289,19 @@
 
 /* Round Pressed/Active */
 .md-button-round-pressed {
-    @extend .md-button-round-enabled;
+   .md-button-round-enabled;
     background-color: rgba(var(--md-sys-color-primary), 0.12); /* state layer 0.12 */
 }
 
 /* Square Enabled */
 .md-button-square-enabled {
-    @extend .md-button-base;
+  .md-button-base;
     border-radius: 4px; /* square/low rounded */
 }
 
 /* Square Disabled */
 .md-button-square-disabled {
-    @extend .md-button-square-enabled;
+   .md-button-square-enabled;
     background-color: rgba(var(--md-sys-color-on-surface), 0.12);
     color: rgba(var(--md-sys-color-on-surface), 0.38);
     pointer-events: none;
@@ -310,13 +310,13 @@
 
 /* Square Hover */
 .md-button-square-hover {
-    @extend .md-button-square-enabled;
+  .md-button-square-enabled;
     background-color: rgba(var(--md-sys-color-primary), 0.08);
 }
 
 /* Square Focus */
 .md-button-square-focus {
-    @extend .md-button-square-enabled;
+  .md-button-square-enabled;
     background-color: rgba(var(--md-sys-color-primary), 0.12);
     outline: 3px solid var(--md-sys-color-primary);
     outline-offset: 2px;
@@ -324,7 +324,7 @@
 
 /* Square Pressed/Active */
 .md-button-square-pressed {
-    @extend .md-button-square-enabled;
+  .md-button-square-enabled;
     background-color: rgba(var(--md-sys-color-primary), 0.12);
 }
 

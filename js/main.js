@@ -6,96 +6,101 @@ document.addEventListener('DOMContentLoaded', () => {
     if (signUpForm) {
         signUpForm.addEventListener('submit', validateSignUpForm);
     } else if (loginForm){
-        loginForm.addEventListener('submit', function(event) {
-            let isValid = true;
-
-            // email
-            const email = document.getElementById('email');
-            const emailError = email.parentElement.querySelector('.error');
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!email.value.trim()) {
-                emailError.textContent = 'ایمیل ضروری است';
-                emailError.style.display = 'block';
-                isValid = false;
-            } else if (!emailRegex.test(email.value)) {
-                emailError.textContent = 'ایمیل نامعتبر است';
-                emailError.style.display = 'block';
-                isValid = false;
-            } else {
-                emailError.textContent = '';
-                emailError.style.display = 'none';
-            }
-
-            // password
-            const password = document.getElementById('password');
-            const passwordError = password.parentElement.querySelector('.error');
-            if (!password.value.trim()) {
-                passwordError.textContent = 'رمز عبور ضروری است';
-                passwordError.style.display = 'block';
-                isValid = false;
-            } else {
-                passwordError.textContent = '';
-                passwordError.style.display = 'none';
-            }
-
-            if (!isValid) {
-                event.preventDefault();
-            }
-        });
+        loginForm.addEventListener('submit', validateSignInForm);
     }
     else if (contactForm){
 
-        contactForm.addEventListener('submit', function(event) {
-    
-            let isValid = true;
-
-            // name
-            const name = document.getElementById('name');
-            const nameError = name.parentElement.querySelector('.error');
-            if (!name.value.trim()) {
-                nameError.textContent = 'نام ضروری است';
-                nameError.style.display = 'block';
-                isValid = false;
-            } else {
-                nameError.textContent = '';
-                nameError.style.display = 'none';
-            }
-
-            // email
-            const email = document.getElementById('email');
-            const emailError = email.parentElement.querySelector('.error');
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!email.value.trim()) {
-                emailError.textContent = 'ایمیل ضروری است';
-                emailError.style.display = 'block';
-                isValid = false;
-            } else if (!emailRegex.test(email.value)) {
-                emailError.textContent = 'ایمیل نامعتبر است';
-                emailError.style.display = 'block';
-                isValid = false;
-            } else {
-                emailError.textContent = '';
-                emailError.style.display = 'none';
-            }
-
-            // message
-            const message = document.getElementById('message');
-            const messageError = message.parentElement.querySelector('.error');
-            if (!message.value.trim()) {
-                messageError.textContent = 'پیام ضروری است';
-                messageError.style.display = 'block';
-                isValid = false;
-            } else {
-                messageError.textContent = '';
-                messageError.style.display = 'none';
-            }
-
-            if (!isValid) {
-                event.preventDefault();
-            }
-        });
+        contactForm.addEventListener('submit', validateContactForm);
     }
 });
+
+function validateContactForm (event) {
+
+    let isValid = true;
+
+    // name
+    const name = document.getElementById('name');
+    const nameError = name.parentElement.querySelector('.error');
+    if (!name.value.trim()) {
+        nameError.textContent = 'نام ضروری است';
+        nameError.style.display = 'block';
+        isValid = false;
+    } else {
+        nameError.textContent = '';
+        nameError.style.display = 'none';
+    }
+
+    // email
+    const email = document.getElementById('email');
+    const emailError = email.parentElement.querySelector('.error');
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!email.value.trim()) {
+        emailError.textContent = 'ایمیل ضروری است';
+        emailError.style.display = 'block';
+        isValid = false;
+    } else if (!emailRegex.test(email.value)) {
+        emailError.textContent = 'ایمیل نامعتبر است';
+        emailError.style.display = 'block';
+        isValid = false;
+    } else {
+        emailError.textContent = '';
+        emailError.style.display = 'none';
+    }
+
+    // message
+    const message = document.getElementById('message');
+    const messageError = message.parentElement.querySelector('.error');
+    if (!message.value.trim()) {
+        messageError.textContent = 'پیام ضروری است';
+        messageError.style.display = 'block';
+        isValid = false;
+    } else {
+        messageError.textContent = '';
+        messageError.style.display = 'none';
+    }
+
+    if (!isValid) {
+        event.preventDefault();
+    }
+}
+
+function validateSignInForm (event) {
+    let isValid = true;
+
+    // email
+    const email = document.getElementById('email');
+    const emailError = email.parentElement.querySelector('.error');
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!email.value.trim()) {
+        emailError.textContent = 'ایمیل ضروری است';
+        emailError.style.display = 'block';
+        isValid = false;
+    } else if (!emailRegex.test(email.value)) {
+        emailError.textContent = 'ایمیل نامعتبر است';
+        emailError.style.display = 'block';
+        isValid = false;
+    } else {
+        emailError.textContent = '';
+        emailError.style.display = 'none';
+    }
+
+    // password
+    const password = document.getElementById('password');
+    const passwordError = password.parentElement.querySelector('.error');
+    if (!password.value.trim()) {
+        passwordError.textContent = 'رمز عبور ضروری است';
+        passwordError.style.display = 'block';
+        isValid = false;
+    } else {
+        passwordError.textContent = '';
+        passwordError.style.display = 'none';
+    }
+
+    if (!isValid) {
+        event.preventDefault();
+    }
+}
+
 
 function validateSignUpForm(event) {
     let isValid = true;
