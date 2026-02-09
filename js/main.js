@@ -333,7 +333,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const contactForm = document.querySelector("#contact-form")
     const filteringBtns = document.querySelectorAll('label.md-radio input');
     const paymentForm  = document.getElementById('payment-form')
-
+    const forgot_password_form = document.getElementById('forgot-password-form');
 
     if (signUpForm) {
         signUpForm.addEventListener('submit', validateSignUpForm);
@@ -358,6 +358,37 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('total-price').textContent = parseInt(total).toLocaleString() || '۰';
 
         paymentForm.onsubmit = onlinePaymentValidation
+    } else if (forgot_password_form) {
+        forgot_password_form.onsubmit = (e) => {
+            event.preventDefault();
+
+            let isValid = true;
+            const email = document.getElementById('email');
+            const emailError = document.getElementById('email-error');
+
+            // بررسی خالی نبودن
+            if (!email.value.trim()) {
+                emailError.textContent = 'ایمیل ضروری است';
+                emailError.style.display = 'block';
+                isValid = false;
+            } else {
+                // بررسی فرمت ایمیل
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email.value)) {
+                    emailError.textContent = 'ایمیل نامعتبر است';
+                    emailError.style.display = 'block';
+                    isValid = false;
+                } else {
+                    emailError.textContent = '';
+                    emailError.style.display = 'none';
+                }
+            }
+
+            if (isValid) {
+                const emailValue = email.value.trim();
+                window.location.href = "otp.html?email=" + encodeURIComponent(emailValue);
+            }
+        }
     }
 
     const hamburger = document.getElementById('hamburger');
