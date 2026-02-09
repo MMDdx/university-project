@@ -9,22 +9,29 @@
 <body>
 <header>
     <div class="logo-container">
-        <a href="#" class="logo">
-            <!-- لوگوی JPG به جای SVG -->
-            <img src="../assets/logo/logo.png" alt="لوگوی تورهای گردشگری" width="40" height="40" >
-
+        <a href="../index.html" class="logo">
+            <img src="../assets/logo/logo.png" alt="لوگوی تورهای گردشگری">
+            <span>تورهای گردشگری</span>
         </a>
     </div>
-    <nav>
+
+    <!-- آیکون همبرگری -->
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <nav id="nav-menu">
         <ul>
-            <li><a class="md-text-medium" href="../index.html">خانه</a></li>
-            <li><a  class="md-text-medium" href="../index.html#tours">تورها</a></li>
-            <li><a  class="md-text-medium" href="../plans.html">پلن‌های اشتراک</a></li>
-            <li><a  class="md-text-medium" href="../about.html">درباره ما</a></li>
-            <li><a  class="md-text-medium" href="../team.html">تیم ما</a></li>
-            <li><a  class="md-text-medium" href="../contact.html">تماس با ما</a></li>
-            <li><a  class="md-text-medium" href="../login.html">ورود</a></li>
-            <li><a  class="md-text-medium" href="../signup.html">ثبت نام</a></li>
+            <li><a href="../index.html">خانه</a></li>
+            <li><a href="../index.html#tours">تورها</a></li>
+            <li><a href="../plans.html">پلن‌های اشتراک</a></li>
+            <li><a href="../about.html">درباره ما</a></li>
+            <li><a href="../team.html">تیم ما</a></li>
+            <li><a href="../contact.html">تماس با ما</a></li>
+            <li><a href="../login.html">ورود</a></li>
+            <li><a href="../signup.html">ثبت نام</a></li>
         </ul>
     </nav>
 </header>
@@ -56,6 +63,7 @@
 <button class="md-fab-go-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
     <img class="fab-icon" src="../assets/svg/arrow-up-svgrepo-com.svg" >
 </button>
+<script src="../js/main.js"></script>
 </body>
 
 </html>

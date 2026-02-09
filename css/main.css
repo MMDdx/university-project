@@ -67,7 +67,7 @@
       font-size: 28px;
       font-weight: bold;
       color: var(--md-sys-color-primary);
-      margin-bottom: 24px;
+      /*margin-bottom: 24px;*/
   }
 
   h2 {
@@ -545,12 +545,17 @@ html, body {
 }
 
 .logo {
-    display: inline-flex;
+    display: flow;
     align-items: center;
-    /* color: white; */
+     color: var(--md-sys-color-primary);
     text-decoration: none;
     font-weight: bold;
     font-size: 18px;
+}
+
+.logo-container span{
+    display: none;
+    color: var(--md-sys-color-on-primary);
 }
 
 .logo img {
@@ -563,10 +568,9 @@ html, body {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.logo span {
-    color: white;
-}
-
+/*.logo span {*/
+/*    color: white;*/
+/*}*/
 .md-filled-button-small {
     display: inline-flex;
     align-items: center;
@@ -874,7 +878,7 @@ html, body {
     align-items: center;
     justify-content: center;
     transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease; /* انیمیشن روان */
-    z-index: 1000; /* بالای همه المان‌ها */
+    z-index: 999; /* بالای همه المان‌ها */
 }
 
 .md-fab-go-top:hover {
@@ -1160,4 +1164,108 @@ html, body {
 /* وقتی هیچ توری نمایش داده نمی‌شود، ارتفاع حفظ شود */
 .tours-grid:empty {
     min-height: 60vh;
+}
+/* Hamburger Menu Styles */
+.hamburger {
+    display: none; /* در دسکتاپ پنهان */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px; /* سمت راست در RTL */
+    z-index: 1001;
+}
+
+.hamburger span {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+/* وقتی فعال است (باز) */
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Nav Menu */
+#nav-menu {
+    display: block; /* در دسکتاپ نمایش */
+}
+
+#nav-menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 0 16px;
+}
+
+#nav-menu a {
+    color: var(--md-sys-color-on-primary);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 8px;
+    white-space: nowrap;
+}
+
+/* Responsive برای موبایل */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .logo-container span{
+        display: block;
+    }
+
+    #nav-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: var(--md-sys-color-primary);
+        display: none;
+        padding-top: 80px; /* فاصله از بالا */
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        z-index: 1000;
+    }
+
+    #nav-menu.active {
+        display: block;
+    }
+
+    #nav-menu ul {
+        flex-direction: column;
+        gap: 16px;
+        align-items: center;
+    }
+
+    #nav-menu a {
+        padding: 12px 24px;
+        font-size: 18px;
+        width: 80%;
+        text-align: center;
+        border-radius: 8px;
+    }
+
+    #nav-menu a:hover {
+        background-color: var(--md-sys-color-primary-container);
+    }
+
+
 }
