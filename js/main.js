@@ -1,6 +1,4 @@
 
-
-
 // تابع برای ایجاد .error اگر وجود نداشته باشه
 function getErrorElement(parent) {
     let error = parent.querySelector('.error');
@@ -361,28 +359,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
         paymentForm.onsubmit = onlinePaymentValidation
     }
-    console.log(paymentForm)
 
-});
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
 
-
-let buttons = document.querySelectorAll(".cart-section button")
-
-for (const btn of buttons) {
-    btn.onclick = addToCart
-}
-
-const hamburger = document.getElementById('hamburger');
-const navMenu = document.getElementById('nav-menu');
-
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navMenu.classList.toggle('active');
-});
-
-document.querySelectorAll('nav a').forEach(link => {
-    link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navMenu.classList.remove('active');
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
     });
+
+    document.querySelectorAll('nav a').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        });
+    });
+
 });
+

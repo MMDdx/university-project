@@ -59,8 +59,13 @@
         <img class="fab-icon" src="./assets/svg/arrow-up-svgrepo-com.svg" >
     </button>
 
-    <script  src="js/main.js">
-        
+    <script  src="js/main.js"></script>
+    <script>
+        let buttons = document.querySelectorAll(".cart-section button")
+
+    for (const btn of buttons) {
+        btn.onclick = addToCart
+    }
     </script>
     
 </body>
