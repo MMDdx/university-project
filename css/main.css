@@ -451,6 +451,11 @@ nav ul {
     padding: 0 16px;
 }
 
+button.md-filled-medium{
+    font-family: 'Vazir', sans-serif;
+    padding: 8px;
+}
+
 nav a {
     color: var(--md-sys-color-on-primary);
     text-decoration: none;
