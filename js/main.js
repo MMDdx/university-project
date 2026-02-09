@@ -66,7 +66,7 @@ function onlinePaymentValidation(event) {
         }
 
         if (!isValid) {
-            event.preventDefault(); // جلوگیری از ارسال فرم
+            event.preventDefault();
         }
 }
 

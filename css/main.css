@@ -370,6 +370,7 @@
     font-size: 20px;
     color: var(--md-sys-color-primary);
     margin-bottom: 16px;
+    margin-top: 10px;
 }
 
 a{
@@ -1091,6 +1092,7 @@ html, body {
 
 #sort-dropdown {
     width: 200px;
+    font-family: 'Vazir', sans-serif;
 }
 
 .categories {

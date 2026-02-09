@@ -1,9 +1,4 @@
-/* =============================================
-   typography.css - تایپوگرافی Material Design 3
-   (نسخه مورد تأیید استاد)
-   ============================================= */
 
-/* تعریف فونت Vazir */
 @font-face {
     font-family: 'Vazir';
     src: url('../font/Vazir.woff2') format('woff2'),
